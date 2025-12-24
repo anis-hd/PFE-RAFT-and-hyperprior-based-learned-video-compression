@@ -2,6 +2,8 @@
 
 This repository implements a learned video compression framework leveraging **RAFT** (Recurrent All-Pairs Field Transforms) for high-quality optical flow estimation and **Hyperprior Autoencoders** for efficient entropy coding of motion and residuals. The system includes a custom codec for encoding videos into a compact `.rdvc` format and decoding them back with high fidelity.
 
+
+full report: [PFE Report](https://www.researchgate.net/publication/392626523_Recurrent_All-Pairs_Field_Transform_RAFT_Hyperprior_Entropy_Coding_and_Quantum_I-Frame_Encoding_for_Video_Compression?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6InByb2ZpbGUiLCJwYWdlIjoicHJvZmlsZSJ9fQ)
 ##  Features
 
 - **Learned Optical Flow**: Uses RAFT to estimate motion between frames, enabling effective motion compensation.
