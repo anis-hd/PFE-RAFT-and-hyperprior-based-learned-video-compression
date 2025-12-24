@@ -43,7 +43,7 @@ The model explicitly handles motion and residuals. Below are the reconstructed o
 ### Training Progression
 Visualizing the model's output at the latest training epoch (Phase 3). This includes the motion compensation output and final reconstruction.
 
-![Epoch Visualization](codec_visualizations_3phase_resAE_vis/epoch_0127_phase3_vis.png)
+![Epoch Visualization](codec_visualizations_3phase_resAE_vis/epoch_0115_phase3_vis.png)
 
 ### Training Metrics
 Performance metrics tracked over training phases.
