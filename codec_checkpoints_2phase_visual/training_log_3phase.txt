@@ -1,0 +1,1566 @@
+2025-05-10 22:49:46 - ============================================================
+Starting Training Session (3-Phase)
+============================================================
+2025-05-10 22:49:46 - frame_base_dir: ./sequence
+2025-05-10 22:49:46 - flow_base_dir: ./generated_flow
+2025-05-10 22:49:46 - checkpoint_dir: ./codec_checkpoints_2phase_visual
+2025-05-10 22:49:46 - vis_dir: ./codec_visualizations_3phase
+2025-05-10 22:49:46 - log_file: training_log_3phase.txt
+2025-05-10 22:49:46 - latest_checkpoint_file: latest_checkpoint_3phase.pth.tar
+2025-05-10 22:49:46 - motion_latent_channels: 128
+2025-05-10 22:49:46 - residual_latent_channels: 192
+2025-05-10 22:49:46 - mcn_base_channels: 32
+2025-05-10 22:49:46 - encoder_base_channels: 64
+2025-05-10 22:49:46 - encoder_res_blocks: 2
+2025-05-10 22:49:46 - encoder_downsample_layers: 3
+2025-05-10 22:49:46 - decoder_res_blocks: 2
+2025-05-10 22:49:46 - decoder_upsample_layers: 3
+2025-05-10 22:49:46 - epochs: 1000
+2025-05-10 22:49:46 - batch_size: 4
+2025-05-10 22:49:46 - learning_rate: 0.0001
+2025-05-10 22:49:46 - weight_decay: 1e-05
+2025-05-10 22:49:46 - clip_max_norm: 1.0
+2025-05-10 22:49:46 - seed: 42
+2025-05-10 22:49:46 - num_workers: 8
+2025-05-10 22:49:46 - print_freq: 100
+2025-05-10 22:49:46 - use_amp: True
+2025-05-10 22:49:46 - bitstream_calc_freq: 200
+2025-05-10 22:49:46 - phase1_epochs: 5
+2025-05-10 22:49:46 - phase3_start_epoch: 32
+2025-05-10 22:49:46 - lambda_mse_flow: 10000.0
+2025-05-10 22:49:46 - lambda_mse_residual: 7000.0
+2025-05-10 22:49:46 - lambda_bpp_motion: 1.0
+2025-05-10 22:49:46 - lambda_bpp_residual: 1.0
+2025-05-10 22:49:46 - lambda_msssim_phase3: 1.0
+2025-05-10 22:49:46 - learning_rate_phase3: 1e-05
+2025-05-10 22:49:46 - freeze_mcn_phase1: True
+2025-05-10 22:49:46 - device: cuda
+2025-05-10 22:49:46 - Setting up dataset...
+2025-05-10 22:51:51 - Dataset: 18000 pairs. Loader: 4500 batches/epoch.
+2025-05-10 22:51:51 - Initializing Video Codec model...
+2025-05-10 22:51:52 - Model initialized (29,938,216 total trainable parameters initially).
+2025-05-10 22:51:52 - No checkpoint found. Starting from scratch.
+2025-05-10 22:51:52 - --- Starting Training Loop from Epoch 1 to 1000 ---
+2025-05-10 22:51:52 - 
+--- Starting Epoch 1/1000 (Phase 1 (ResAE on GTWarp, MCN Frozen)) ---
+2025-05-10 22:51:52 - Phase 1: Freezing MCN parameters.
+2025-05-10 22:53:14 -   P1 E1 B100/4500 | L:48806.5977 ...
+2025-05-10 22:53:48 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 22:53:48 -   P1 E1 B200/4500 | L:11811.7305 ...
+2025-05-10 22:54:21 -   P1 E1 B300/4500 | L:14436.5312 ...
+2025-05-10 22:54:56 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 22:54:56 -   P1 E1 B400/4500 | L:7387.3711 ...
+2025-05-10 22:55:27 -   P1 E1 B500/4500 | L:6534.4595 ...
+2025-05-10 22:55:59 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 22:55:59 -   P1 E1 B600/4500 | L:4471.5171 ...
+2025-05-10 22:56:34 -   P1 E1 B700/4500 | L:8535.6582 ...
+2025-05-10 22:57:08 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 22:57:08 -   P1 E1 B800/4500 | L:8640.1250 ...
+2025-05-10 22:57:40 -   P1 E1 B900/4500 | L:11573.6602 ...
+2025-05-10 22:58:10 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 22:58:10 -   P1 E1 B1000/4500 | L:14532.0479 ...
+2025-05-10 22:58:41 -   P1 E1 B1100/4500 | L:8026.6689 ...
+2025-05-10 22:59:13 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 22:59:13 -   P1 E1 B1200/4500 | L:22488.0137 ...
+2025-05-10 22:59:44 -   P1 E1 B1300/4500 | L:17444.4004 ...
+2025-05-10 23:00:15 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:00:15 -   P1 E1 B1400/4500 | L:10024.3545 ...
+2025-05-10 23:00:46 -   P1 E1 B1500/4500 | L:11300.4795 ...
+2025-05-10 23:01:21 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:01:21 -   P1 E1 B1600/4500 | L:189910.6562 ...
+2025-05-10 23:01:53 -   P1 E1 B1700/4500 | L:18008.5332 ...
+2025-05-10 23:02:25 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:02:25 -   P1 E1 B1800/4500 | L:14923.9365 ...
+2025-05-10 23:03:00 -   P1 E1 B1900/4500 | L:14842.0898 ...
+2025-05-10 23:03:31 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:03:31 -   P1 E1 B2000/4500 | L:32990.8203 ...
+2025-05-10 23:04:02 -   P1 E1 B2100/4500 | L:38925.4336 ...
+2025-05-10 23:04:33 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:04:33 -   P1 E1 B2200/4500 | L:22273.5059 ...
+2025-05-10 23:05:05 -   P1 E1 B2300/4500 | L:8249.5186 ...
+2025-05-10 23:05:36 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:05:36 -   P1 E1 B2400/4500 | L:7342.9297 ...
+2025-05-10 23:06:06 -   P1 E1 B2500/4500 | L:14347.5088 ...
+2025-05-10 23:06:36 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:06:36 -   P1 E1 B2600/4500 | L:75159.7969 ...
+2025-05-10 23:07:06 -   P1 E1 B2700/4500 | L:32502.3750 ...
+2025-05-10 23:07:36 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:07:36 -   P1 E1 B2800/4500 | L:154869.3438 ...
+2025-05-10 23:08:06 -   P1 E1 B2900/4500 | L:8557.6270 ...
+2025-05-10 23:08:37 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:08:37 -   P1 E1 B3000/4500 | L:262915.7188 ...
+2025-05-10 23:09:07 -   P1 E1 B3100/4500 | L:144394.7188 ...
+2025-05-10 23:09:37 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:09:37 -   P1 E1 B3200/4500 | L:25216.4180 ...
+2025-05-10 23:10:07 -   P1 E1 B3300/4500 | L:13429.6465 ...
+2025-05-10 23:10:37 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:10:37 -   P1 E1 B3400/4500 | L:8490.0000 ...
+2025-05-10 23:11:07 -   P1 E1 B3500/4500 | L:37542.1836 ...
+2025-05-10 23:11:38 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:11:38 -   P1 E1 B3600/4500 | L:381018.6250 ...
+2025-05-10 23:12:08 -   P1 E1 B3700/4500 | L:6219.8535 ...
+2025-05-10 23:12:38 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:12:38 -   P1 E1 B3800/4500 | L:53397.2891 ...
+2025-05-10 23:13:08 -   P1 E1 B3900/4500 | L:16360.0127 ...
+2025-05-10 23:13:38 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:13:38 -   P1 E1 B4000/4500 | L:13663.2041 ...
+2025-05-10 23:14:08 -   P1 E1 B4100/4500 | L:106047.7266 ...
+2025-05-10 23:14:38 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:14:38 -   P1 E1 B4200/4500 | L:561324.5000 ...
+2025-05-10 23:15:08 -   P1 E1 B4300/4500 | L:16311.1621 ...
+2025-05-10 23:15:38 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:15:38 -   P1 E1 B4400/4500 | L:25798.8320 ...
+2025-05-10 23:16:08 -   P1 E1 B4500/4500 | L:20209.0801 ...
+2025-05-10 23:16:09 - ------------------------------------------------------------
+Epoch 1/1000 Summary (Phase 1 (ResAE on GTWarp, MCN Frozen)) | Time: 1457.79s
+2025-05-10 23:16:09 -   Avg Loss: 72881.13452 | MSE_F: 7.284251 | MSE_R: 0.002584
+2025-05-10 23:16:09 -   Avg BPP_M(est): 8.43076 | BPP_R(est): 12.11036
+2025-05-10 23:16:09 - ------------------------------------------------------------
+2025-05-10 23:16:10 - Saved latest checkpoint to 'latest_checkpoint_3phase.pth.tar'.
+2025-05-10 23:16:11 - Generated visualization for Epoch 1.
+2025-05-10 23:16:11 - 
+--- Starting Epoch 2/1000 (Phase 1 (ResAE on GTWarp, MCN Frozen)) ---
+2025-05-10 23:16:11 - Phase 1: Freezing MCN parameters.
+2025-05-10 23:17:21 -   P1 E2 B100/4500 | L:7644.5405 ...
+2025-05-10 23:17:51 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:17:51 -   P1 E2 B200/4500 | L:11794.1455 ...
+2025-05-10 23:18:21 -   P1 E2 B300/4500 | L:24417.6191 ...
+2025-05-10 23:18:50 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:18:50 -   P1 E2 B400/4500 | L:7515.6245 ...
+2025-05-10 23:19:20 -   P1 E2 B500/4500 | L:10081.1543 ...
+2025-05-10 23:19:50 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:19:50 -   P1 E2 B600/4500 | L:10280.7559 ...
+2025-05-10 23:20:20 -   P1 E2 B700/4500 | L:11073.9688 ...
+2025-05-10 23:20:50 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:20:50 -   P1 E2 B800/4500 | L:15460.8896 ...
+2025-05-10 23:21:20 -   P1 E2 B900/4500 | L:383956.3750 ...
+2025-05-10 23:21:50 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:21:50 -   P1 E2 B1000/4500 | L:15691.2842 ...
+2025-05-10 23:22:20 -   P1 E2 B1100/4500 | L:28480.2109 ...
+2025-05-10 23:22:50 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:22:50 -   P1 E2 B1200/4500 | L:54298.2109 ...
+2025-05-10 23:23:20 -   P1 E2 B1300/4500 | L:19653.7930 ...
+2025-05-10 23:23:50 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:23:50 -   P1 E2 B1400/4500 | L:99067.5469 ...
+2025-05-10 23:24:20 -   P1 E2 B1500/4500 | L:31558.3262 ...
+2025-05-10 23:24:50 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:24:50 -   P1 E2 B1600/4500 | L:32244.7070 ...
+2025-05-10 23:25:20 -   P1 E2 B1700/4500 | L:14040.9795 ...
+2025-05-10 23:25:50 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:25:50 -   P1 E2 B1800/4500 | L:10901.0957 ...
+2025-05-10 23:26:20 -   P1 E2 B1900/4500 | L:6719.9092 ...
+2025-05-10 23:26:50 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:26:50 -   P1 E2 B2000/4500 | L:34772.1172 ...
+2025-05-10 23:27:20 -   P1 E2 B2100/4500 | L:57631.9375 ...
+2025-05-10 23:27:50 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:27:50 -   P1 E2 B2200/4500 | L:113145.2969 ...
+2025-05-10 23:28:20 -   P1 E2 B2300/4500 | L:6454.0854 ...
+2025-05-10 23:28:50 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:28:50 -   P1 E2 B2400/4500 | L:9992.1738 ...
+2025-05-10 23:29:20 -   P1 E2 B2500/4500 | L:5151.1489 ...
+2025-05-10 23:29:50 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:29:50 -   P1 E2 B2600/4500 | L:24095.6191 ...
+2025-05-10 23:30:20 -   P1 E2 B2700/4500 | L:684760.1875 ...
+2025-05-10 23:30:50 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:30:50 -   P1 E2 B2800/4500 | L:15239.8018 ...
+2025-05-10 23:31:20 -   P1 E2 B2900/4500 | L:3200.2871 ...
+2025-05-10 23:31:50 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:31:50 -   P1 E2 B3000/4500 | L:449557.5312 ...
+2025-05-10 23:32:20 -   P1 E2 B3100/4500 | L:18809.1133 ...
+2025-05-10 23:32:50 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:32:50 -   P1 E2 B3200/4500 | L:29522.6113 ...
+2025-05-10 23:33:20 -   P1 E2 B3300/4500 | L:3613.9844 ...
+2025-05-10 23:33:50 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:33:50 -   P1 E2 B3400/4500 | L:189330.3281 ...
+2025-05-10 23:34:20 -   P1 E2 B3500/4500 | L:84155.4922 ...
+2025-05-10 23:34:50 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:34:50 -   P1 E2 B3600/4500 | L:7059.7588 ...
+2025-05-10 23:35:20 -   P1 E2 B3700/4500 | L:50789.9258 ...
+2025-05-10 23:35:50 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:35:50 -   P1 E2 B3800/4500 | L:3760.2610 ...
+2025-05-10 23:36:20 -   P1 E2 B3900/4500 | L:77591.8594 ...
+2025-05-10 23:36:50 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:36:50 -   P1 E2 B4000/4500 | L:12440.2305 ...
+2025-05-10 23:37:20 -   P1 E2 B4100/4500 | L:8783.4863 ...
+2025-05-10 23:37:50 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:37:50 -   P1 E2 B4200/4500 | L:77508.3281 ...
+2025-05-10 23:38:20 -   P1 E2 B4300/4500 | L:11540.9639 ...
+2025-05-10 23:38:50 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:38:50 -   P1 E2 B4400/4500 | L:11150.1992 ...
+2025-05-10 23:39:20 -   P1 E2 B4500/4500 | L:3382.6909 ...
+2025-05-10 23:39:22 - ------------------------------------------------------------
+Epoch 2/1000 Summary (Phase 1 (ResAE on GTWarp, MCN Frozen)) | Time: 1390.62s
+2025-05-10 23:39:22 -   Avg Loss: 50588.94001 | MSE_F: 5.056946 | MSE_R: 0.001044
+2025-05-10 23:39:22 -   Avg BPP_M(est): 6.26266 | BPP_R(est): 5.90961
+2025-05-10 23:39:22 - ------------------------------------------------------------
+2025-05-10 23:39:22 - Saved latest checkpoint to 'latest_checkpoint_3phase.pth.tar'.
+2025-05-10 23:39:23 - Generated visualization for Epoch 2.
+2025-05-10 23:39:23 - 
+--- Starting Epoch 3/1000 (Phase 1 (ResAE on GTWarp, MCN Frozen)) ---
+2025-05-10 23:39:23 - Phase 1: Freezing MCN parameters.
+2025-05-10 23:40:32 -   P1 E3 B100/4500 | L:8687.3457 ...
+2025-05-10 23:41:02 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:41:02 -   P1 E3 B200/4500 | L:5507.4268 ...
+2025-05-10 23:41:31 -   P1 E3 B300/4500 | L:20515.1445 ...
+2025-05-10 23:42:01 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:42:01 -   P1 E3 B400/4500 | L:27262.9180 ...
+2025-05-10 23:42:31 -   P1 E3 B500/4500 | L:14981.6455 ...
+2025-05-10 23:43:01 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:43:01 -   P1 E3 B600/4500 | L:6892.3442 ...
+2025-05-10 23:43:31 -   P1 E3 B700/4500 | L:152955.4844 ...
+2025-05-10 23:44:01 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:44:01 -   P1 E3 B800/4500 | L:16212.3066 ...
+2025-05-10 23:44:31 -   P1 E3 B900/4500 | L:68866.9531 ...
+2025-05-10 23:45:01 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:45:01 -   P1 E3 B1000/4500 | L:24011.3340 ...
+2025-05-10 23:45:31 -   P1 E3 B1100/4500 | L:3915.4514 ...
+2025-05-10 23:46:01 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:46:01 -   P1 E3 B1200/4500 | L:15035.7041 ...
+2025-05-10 23:46:31 -   P1 E3 B1300/4500 | L:122809.0703 ...
+2025-05-10 23:47:01 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:47:01 -   P1 E3 B1400/4500 | L:11703.9688 ...
+2025-05-10 23:47:31 -   P1 E3 B1500/4500 | L:10851.4590 ...
+2025-05-10 23:48:01 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:48:01 -   P1 E3 B1600/4500 | L:70143.6016 ...
+2025-05-10 23:48:31 -   P1 E3 B1700/4500 | L:7466.0073 ...
+2025-05-10 23:49:01 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:49:01 -   P1 E3 B1800/4500 | L:23709.6895 ...
+2025-05-10 23:49:31 -   P1 E3 B1900/4500 | L:9750.1758 ...
+2025-05-10 23:50:01 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:50:01 -   P1 E3 B2000/4500 | L:35380.0781 ...
+2025-05-10 23:50:31 -   P1 E3 B2100/4500 | L:148706.8750 ...
+2025-05-10 23:51:01 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:51:01 -   P1 E3 B2200/4500 | L:2170.1704 ...
+2025-05-10 23:51:31 -   P1 E3 B2300/4500 | L:4742.9717 ...
+2025-05-10 23:52:01 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:52:01 -   P1 E3 B2400/4500 | L:18071.5430 ...
+2025-05-10 23:52:31 -   P1 E3 B2500/4500 | L:16595.1191 ...
+2025-05-10 23:53:01 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:53:01 -   P1 E3 B2600/4500 | L:57498.5742 ...
+2025-05-10 23:53:31 -   P1 E3 B2700/4500 | L:240364.3438 ...
+2025-05-10 23:54:01 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:54:01 -   P1 E3 B2800/4500 | L:12052.8623 ...
+2025-05-10 23:54:31 -   P1 E3 B2900/4500 | L:4042.5862 ...
+2025-05-10 23:55:01 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:55:01 -   P1 E3 B3000/4500 | L:4810.8003 ...
+2025-05-10 23:55:31 -   P1 E3 B3100/4500 | L:1192771.8750 ...
+2025-05-10 23:56:01 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:56:01 -   P1 E3 B3200/4500 | L:9788.3525 ...
+2025-05-10 23:56:31 -   P1 E3 B3300/4500 | L:30638.0391 ...
+2025-05-10 23:57:01 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:57:01 -   P1 E3 B3400/4500 | L:23978.3730 ...
+2025-05-10 23:57:31 -   P1 E3 B3500/4500 | L:5564.3921 ...
+2025-05-10 23:58:01 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:58:01 -   P1 E3 B3600/4500 | L:5956.5405 ...
+2025-05-10 23:58:31 -   P1 E3 B3700/4500 | L:7903.9985 ...
+2025-05-10 23:59:01 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-10 23:59:01 -   P1 E3 B3800/4500 | L:72131.9922 ...
+2025-05-10 23:59:31 -   P1 E3 B3900/4500 | L:14608.2520 ...
+2025-05-11 00:00:01 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:00:01 -   P1 E3 B4000/4500 | L:13531.1768 ...
+2025-05-11 00:00:31 -   P1 E3 B4100/4500 | L:1958.7070 ...
+2025-05-11 00:01:02 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:01:02 -   P1 E3 B4200/4500 | L:134271.7500 ...
+2025-05-11 00:01:32 -   P1 E3 B4300/4500 | L:10873.9971 ...
+2025-05-11 00:02:02 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:02:02 -   P1 E3 B4400/4500 | L:7424.9907 ...
+2025-05-11 00:02:32 -   P1 E3 B4500/4500 | L:33239.9883 ...
+2025-05-11 00:02:33 - ------------------------------------------------------------
+Epoch 3/1000 Summary (Phase 1 (ResAE on GTWarp, MCN Frozen)) | Time: 1389.82s
+2025-05-11 00:02:33 -   Avg Loss: 39301.27111 | MSE_F: 3.928527 | MSE_R: 0.000875
+2025-05-11 00:02:33 -   Avg BPP_M(est): 6.27822 | BPP_R(est): 3.59817
+2025-05-11 00:02:33 - ------------------------------------------------------------
+2025-05-11 00:02:33 - Saved latest checkpoint to 'latest_checkpoint_3phase.pth.tar'.
+2025-05-11 00:02:35 - Generated visualization for Epoch 3.
+2025-05-11 00:02:35 - 
+--- Starting Epoch 4/1000 (Phase 1 (ResAE on GTWarp, MCN Frozen)) ---
+2025-05-11 00:02:35 - Phase 1: Freezing MCN parameters.
+2025-05-11 00:03:43 -   P1 E4 B100/4500 | L:313650.2500 ...
+2025-05-11 00:04:13 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:04:13 -   P1 E4 B200/4500 | L:39414.6562 ...
+2025-05-11 00:04:42 -   P1 E4 B300/4500 | L:15938.4053 ...
+2025-05-11 00:05:12 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:05:12 -   P1 E4 B400/4500 | L:281231.6562 ...
+2025-05-11 00:05:42 -   P1 E4 B500/4500 | L:182834.0312 ...
+2025-05-11 00:06:12 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:06:12 -   P1 E4 B600/4500 | L:16696.2090 ...
+2025-05-11 00:06:42 -   P1 E4 B700/4500 | L:1813.4572 ...
+2025-05-11 00:07:12 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:07:12 -   P1 E4 B800/4500 | L:22333.8828 ...
+2025-05-11 00:07:42 -   P1 E4 B900/4500 | L:16359.3750 ...
+2025-05-11 00:08:12 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:08:12 -   P1 E4 B1000/4500 | L:5569.5474 ...
+2025-05-11 00:08:42 -   P1 E4 B1100/4500 | L:8138.7261 ...
+2025-05-11 00:09:12 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:09:12 -   P1 E4 B1200/4500 | L:6748.5186 ...
+2025-05-11 00:09:42 -   P1 E4 B1300/4500 | L:4189.0225 ...
+2025-05-11 00:10:11 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:10:11 -   P1 E4 B1400/4500 | L:355904.2188 ...
+2025-05-11 00:10:41 -   P1 E4 B1500/4500 | L:3592.0034 ...
+2025-05-11 00:11:11 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:11:11 -   P1 E4 B1600/4500 | L:1366.9868 ...
+2025-05-11 00:11:41 -   P1 E4 B1700/4500 | L:104716.7578 ...
+2025-05-11 00:12:11 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:12:11 -   P1 E4 B1800/4500 | L:13695.1768 ...
+2025-05-11 00:12:41 -   P1 E4 B1900/4500 | L:11910.1299 ...
+2025-05-11 00:13:11 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:13:11 -   P1 E4 B2000/4500 | L:3254.2312 ...
+2025-05-11 00:13:41 -   P1 E4 B2100/4500 | L:16875.0625 ...
+2025-05-11 00:14:11 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:14:11 -   P1 E4 B2200/4500 | L:76767.7500 ...
+2025-05-11 00:14:41 -   P1 E4 B2300/4500 | L:1855.5334 ...
+2025-05-11 00:15:11 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:15:11 -   P1 E4 B2400/4500 | L:10800.8232 ...
+2025-05-11 00:15:41 -   P1 E4 B2500/4500 | L:4473.6592 ...
+2025-05-11 00:16:11 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:16:11 -   P1 E4 B2600/4500 | L:3249.1558 ...
+2025-05-11 00:16:41 -   P1 E4 B2700/4500 | L:2451.8164 ...
+2025-05-11 00:17:11 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:17:11 -   P1 E4 B2800/4500 | L:44187.8594 ...
+2025-05-11 00:17:41 -   P1 E4 B2900/4500 | L:10678.3057 ...
+2025-05-11 00:18:11 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:18:11 -   P1 E4 B3000/4500 | L:2011.0333 ...
+2025-05-11 00:18:41 -   P1 E4 B3100/4500 | L:18838.7207 ...
+2025-05-11 00:19:11 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:19:11 -   P1 E4 B3200/4500 | L:11509.9951 ...
+2025-05-11 00:19:41 -   P1 E4 B3300/4500 | L:1271050.3750 ...
+2025-05-11 00:20:11 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:20:11 -   P1 E4 B3400/4500 | L:4148.9878 ...
+2025-05-11 00:20:41 -   P1 E4 B3500/4500 | L:66267.5859 ...
+2025-05-11 00:21:11 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:21:11 -   P1 E4 B3600/4500 | L:3245.9932 ...
+2025-05-11 00:21:41 -   P1 E4 B3700/4500 | L:25035.4883 ...
+2025-05-11 00:22:11 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:22:11 -   P1 E4 B3800/4500 | L:3161.3860 ...
+2025-05-11 00:22:41 -   P1 E4 B3900/4500 | L:6985.3320 ...
+2025-05-11 00:23:11 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:23:11 -   P1 E4 B4000/4500 | L:61787.3633 ...
+2025-05-11 00:23:41 -   P1 E4 B4100/4500 | L:18677.8301 ...
+2025-05-11 00:24:11 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:24:11 -   P1 E4 B4200/4500 | L:16952.6309 ...
+2025-05-11 00:24:41 -   P1 E4 B4300/4500 | L:4347.5854 ...
+2025-05-11 00:25:11 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:25:11 -   P1 E4 B4400/4500 | L:41959.0234 ...
+2025-05-11 00:25:41 -   P1 E4 B4500/4500 | L:49500.5781 ...
+2025-05-11 00:25:42 - ------------------------------------------------------------
+Epoch 4/1000 Summary (Phase 1 (ResAE on GTWarp, MCN Frozen)) | Time: 1387.46s
+2025-05-11 00:25:42 -   Avg Loss: 32992.37312 | MSE_F: 3.297762 | MSE_R: 0.000745
+2025-05-11 00:25:42 -   Avg BPP_M(est): 6.36443 | BPP_R(est): 3.17294
+2025-05-11 00:25:42 - ------------------------------------------------------------
+2025-05-11 00:25:43 - Saved latest checkpoint to 'latest_checkpoint_3phase.pth.tar'.
+2025-05-11 00:25:44 - Generated visualization for Epoch 4.
+2025-05-11 00:25:44 - 
+--- Starting Epoch 5/1000 (Phase 1 (ResAE on GTWarp, MCN Frozen)) ---
+2025-05-11 00:25:44 - Phase 1: Freezing MCN parameters.
+2025-05-11 00:26:52 -   P1 E5 B100/4500 | L:3275.1543 ...
+2025-05-11 00:27:22 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:27:22 -   P1 E5 B200/4500 | L:106415.8984 ...
+2025-05-11 00:27:52 -   P1 E5 B300/4500 | L:14948.9170 ...
+2025-05-11 00:28:21 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:28:21 -   P1 E5 B400/4500 | L:73225.9844 ...
+2025-05-11 00:28:51 -   P1 E5 B500/4500 | L:21800.1289 ...
+2025-05-11 00:29:21 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:29:21 -   P1 E5 B600/4500 | L:7768.0244 ...
+2025-05-11 00:29:51 -   P1 E5 B700/4500 | L:5459.9468 ...
+2025-05-11 00:30:21 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:30:21 -   P1 E5 B800/4500 | L:9721.9229 ...
+2025-05-11 00:30:51 -   P1 E5 B900/4500 | L:2123.1399 ...
+2025-05-11 00:31:21 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:31:21 -   P1 E5 B1000/4500 | L:21444.6152 ...
+2025-05-11 00:31:50 -   P1 E5 B1100/4500 | L:5222.1880 ...
+2025-05-11 00:32:20 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:32:20 -   P1 E5 B1200/4500 | L:4649.8105 ...
+2025-05-11 00:32:50 -   P1 E5 B1300/4500 | L:13841.0225 ...
+2025-05-11 00:33:20 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:33:20 -   P1 E5 B1400/4500 | L:4202.4541 ...
+2025-05-11 00:33:50 -   P1 E5 B1500/4500 | L:20197.4316 ...
+2025-05-11 00:34:20 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:34:20 -   P1 E5 B1600/4500 | L:12989.1230 ...
+2025-05-11 00:34:50 -   P1 E5 B1700/4500 | L:35889.9336 ...
+2025-05-11 00:35:20 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:35:20 -   P1 E5 B1800/4500 | L:4281.4043 ...
+2025-05-11 00:35:50 -   P1 E5 B1900/4500 | L:57126.3867 ...
+2025-05-11 00:36:19 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:36:19 -   P1 E5 B2000/4500 | L:209539.1406 ...
+2025-05-11 00:36:49 -   P1 E5 B2100/4500 | L:60558.4141 ...
+2025-05-11 00:37:19 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:37:19 -   P1 E5 B2200/4500 | L:24212.2617 ...
+2025-05-11 00:37:49 -   P1 E5 B2300/4500 | L:378814.9688 ...
+2025-05-11 00:38:19 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:38:19 -   P1 E5 B2400/4500 | L:10086.8350 ...
+2025-05-11 00:38:49 -   P1 E5 B2500/4500 | L:2175.0403 ...
+2025-05-11 00:39:19 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:39:19 -   P1 E5 B2600/4500 | L:2888.6865 ...
+2025-05-11 00:39:49 -   P1 E5 B2700/4500 | L:14784.2695 ...
+2025-05-11 00:40:19 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:40:19 -   P1 E5 B2800/4500 | L:21360.8828 ...
+2025-05-11 00:40:49 -   P1 E5 B2900/4500 | L:4889.4800 ...
+2025-05-11 00:41:19 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:41:19 -   P1 E5 B3000/4500 | L:3424.2817 ...
+2025-05-11 00:41:49 -   P1 E5 B3100/4500 | L:42099.3281 ...
+2025-05-11 00:42:19 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:42:19 -   P1 E5 B3200/4500 | L:47540.4844 ...
+2025-05-11 00:42:48 -   P1 E5 B3300/4500 | L:2990.5474 ...
+2025-05-11 00:43:18 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:43:18 -   P1 E5 B3400/4500 | L:17280.5312 ...
+2025-05-11 00:43:48 -   P1 E5 B3500/4500 | L:13250.9541 ...
+2025-05-11 00:44:18 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:44:18 -   P1 E5 B3600/4500 | L:7833.5645 ...
+2025-05-11 00:44:48 -   P1 E5 B3700/4500 | L:15985.6133 ...
+2025-05-11 00:45:18 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:45:18 -   P1 E5 B3800/4500 | L:21052.4180 ...
+2025-05-11 00:45:48 -   P1 E5 B3900/4500 | L:26156.4199 ...
+2025-05-11 00:46:18 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:46:18 -   P1 E5 B4000/4500 | L:25847.1055 ...
+2025-05-11 00:46:48 -   P1 E5 B4100/4500 | L:2064.3152 ...
+2025-05-11 00:47:18 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:47:18 -   P1 E5 B4200/4500 | L:5500.1270 ...
+2025-05-11 00:47:48 -   P1 E5 B4300/4500 | L:8765.6279 ...
+2025-05-11 00:48:20 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 00:48:20 -   P1 E5 B4400/4500 | L:7827.6880 ...
+2025-05-11 00:48:51 -   P1 E5 B4500/4500 | L:2163.4519 ...
+2025-05-11 00:48:53 - ------------------------------------------------------------
+Epoch 5/1000 Summary (Phase 1 (ResAE on GTWarp, MCN Frozen)) | Time: 1388.99s
+2025-05-11 00:48:53 -   Avg Loss: 29446.04987 | MSE_F: 2.943224 | MSE_R: 0.000664
+2025-05-11 00:48:53 -   Avg BPP_M(est): 6.37990 | BPP_R(est): 2.78227
+2025-05-11 00:48:53 - ------------------------------------------------------------
+2025-05-11 00:48:53 - Saved latest checkpoint to 'latest_checkpoint_3phase.pth.tar'.
+2025-05-11 00:48:54 - Generated visualization for Epoch 5.
+2025-05-11 00:48:54 - 
+--- Starting Epoch 6/1000 (Phase 2 (ResAE on MCN, All Trainable)) ---
+2025-05-11 00:48:54 - Phase 2: All relevant parameters trainable (including MCN).
+2025-05-11 02:18:14 - ============================================================
+Starting Training Session (3-Phase)
+============================================================
+2025-05-11 02:18:14 - frame_base_dir: ./sequence
+2025-05-11 02:18:14 - flow_base_dir: ./generated_flow
+2025-05-11 02:18:14 - checkpoint_dir: ./codec_checkpoints_2phase_visual
+2025-05-11 02:18:14 - vis_dir: ./codec_visualizations_3phase
+2025-05-11 02:18:14 - log_file: training_log_3phase.txt
+2025-05-11 02:18:14 - latest_checkpoint_file: latest_checkpoint_3phase.pth.tar
+2025-05-11 02:18:14 - motion_latent_channels: 128
+2025-05-11 02:18:14 - residual_latent_channels: 192
+2025-05-11 02:18:14 - mcn_base_channels: 32
+2025-05-11 02:18:14 - encoder_base_channels: 64
+2025-05-11 02:18:14 - encoder_res_blocks: 2
+2025-05-11 02:18:14 - encoder_downsample_layers: 3
+2025-05-11 02:18:14 - decoder_res_blocks: 2
+2025-05-11 02:18:14 - decoder_upsample_layers: 3
+2025-05-11 02:18:14 - epochs: 1000
+2025-05-11 02:18:14 - batch_size: 4
+2025-05-11 02:18:14 - learning_rate: 0.0001
+2025-05-11 02:18:14 - weight_decay: 1e-05
+2025-05-11 02:18:14 - clip_max_norm: 1.0
+2025-05-11 02:18:14 - seed: 42
+2025-05-11 02:18:14 - num_workers: 8
+2025-05-11 02:18:14 - print_freq: 100
+2025-05-11 02:18:14 - use_amp: True
+2025-05-11 02:18:14 - bitstream_calc_freq: 200
+2025-05-11 02:18:14 - phase1_epochs: 5
+2025-05-11 02:18:14 - phase3_start_epoch: 32
+2025-05-11 02:18:14 - lambda_mse_flow: 10000.0
+2025-05-11 02:18:14 - lambda_mse_residual: 7000.0
+2025-05-11 02:18:14 - lambda_bpp_motion: 1.0
+2025-05-11 02:18:14 - lambda_bpp_residual: 1.0
+2025-05-11 02:18:14 - lambda_msssim_phase3: 1.0
+2025-05-11 02:18:14 - learning_rate_phase3: 1e-05
+2025-05-11 02:18:14 - freeze_mcn_phase1: True
+2025-05-11 02:18:14 - device: cuda
+2025-05-11 02:18:14 - Setting up dataset...
+2025-05-11 02:18:39 - Dataset: 18000 pairs. Loader: 4500 batches/epoch.
+2025-05-11 02:18:39 - Initializing Video Codec model...
+2025-05-11 02:18:39 - Model initialized (29,938,216 total trainable parameters initially).
+2025-05-11 02:18:39 - Found latest checkpoint: ./codec_checkpoints_2phase_visual\latest_checkpoint_3phase.pth.tar
+2025-05-11 02:18:40 - Resumed successfully from Epoch 5.
+2025-05-11 02:18:40 - --- Starting Training Loop from Epoch 6 to 1000 ---
+2025-05-11 02:18:40 - 
+--- Starting Epoch 6/1000 (Phase 2 (ResAE on MCN, All Trainable)) ---
+2025-05-11 02:18:40 - Phase 2: All relevant parameters trainable (including MCN).
+2025-05-11 02:19:58 -   P2 E6 B100/4500 | L:24762.2637 ...
+2025-05-11 02:20:35 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 02:20:35 -   P2 E6 B200/4500 | L:15849.1445 ...
+2025-05-11 02:21:12 -   P2 E6 B300/4500 | L:9811.2178 ...
+2025-05-11 02:21:49 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 02:21:49 -   P2 E6 B400/4500 | L:6670.4102 ...
+2025-05-11 02:22:26 -   P2 E6 B500/4500 | L:1835.8018 ...
+2025-05-11 02:23:04 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 02:23:04 -   P2 E6 B600/4500 | L:3670.1116 ...
+2025-05-11 02:23:41 -   P2 E6 B700/4500 | L:8507.6162 ...
+2025-05-11 02:24:18 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 02:24:18 -   P2 E6 B800/4500 | L:2517.5325 ...
+2025-05-11 02:24:55 -   P2 E6 B900/4500 | L:3901.8848 ...
+2025-05-11 02:25:33 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 02:25:33 -   P2 E6 B1000/4500 | L:8135.8843 ...
+2025-05-11 02:26:10 -   P2 E6 B1100/4500 | L:46637.7422 ...
+2025-05-11 02:26:48 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 02:26:48 -   P2 E6 B1200/4500 | L:6981.5659 ...
+2025-05-11 02:27:25 -   P2 E6 B1300/4500 | L:1533.1544 ...
+2025-05-11 02:28:02 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 02:28:02 -   P2 E6 B1400/4500 | L:2942.5112 ...
+2025-05-11 02:28:40 -   P2 E6 B1500/4500 | L:12131.6016 ...
+2025-05-11 02:29:18 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 02:29:18 -   P2 E6 B1600/4500 | L:46251.1953 ...
+2025-05-11 02:29:55 -   P2 E6 B1700/4500 | L:5178.3989 ...
+2025-05-11 02:30:33 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 02:30:33 -   P2 E6 B1800/4500 | L:3288.4846 ...
+2025-05-11 02:31:10 -   P2 E6 B1900/4500 | L:1496.9116 ...
+2025-05-11 02:31:47 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 02:31:47 -   P2 E6 B2000/4500 | L:1891.7783 ...
+2025-05-11 02:32:24 -   P2 E6 B2100/4500 | L:7635.9673 ...
+2025-05-11 02:33:02 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 02:33:02 -   P2 E6 B2200/4500 | L:11643.4521 ...
+2025-05-11 02:33:39 -   P2 E6 B2300/4500 | L:7374.9292 ...
+2025-05-11 02:34:16 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 02:34:16 -   P2 E6 B2400/4500 | L:2216.2939 ...
+2025-05-11 02:34:54 -   P2 E6 B2500/4500 | L:13694.8740 ...
+2025-05-11 02:35:31 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 02:35:31 -   P2 E6 B2600/4500 | L:49124.7773 ...
+2025-05-11 02:36:08 -   P2 E6 B2700/4500 | L:13453.6768 ...
+2025-05-11 02:36:45 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 02:36:45 -   P2 E6 B2800/4500 | L:76052.4141 ...
+2025-05-11 02:37:23 -   P2 E6 B2900/4500 | L:1826.9403 ...
+2025-05-11 02:38:00 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 02:38:00 -   P2 E6 B3000/4500 | L:131653.9375 ...
+2025-05-11 02:38:37 -   P2 E6 B3100/4500 | L:33733.7461 ...
+2025-05-11 02:39:15 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 02:39:15 -   P2 E6 B3200/4500 | L:16338.9307 ...
+2025-05-11 02:39:52 -   P2 E6 B3300/4500 | L:3658.3530 ...
+2025-05-11 02:40:29 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 02:40:29 -   P2 E6 B3400/4500 | L:2274.7698 ...
+2025-05-11 02:41:07 -   P2 E6 B3500/4500 | L:17041.1543 ...
+2025-05-11 02:41:44 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 02:41:44 -   P2 E6 B3600/4500 | L:199392.1094 ...
+2025-05-11 02:42:21 -   P2 E6 B3700/4500 | L:7976.3447 ...
+2025-05-11 02:42:59 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 02:42:59 -   P2 E6 B3800/4500 | L:9194.7139 ...
+2025-05-11 02:43:36 -   P2 E6 B3900/4500 | L:5974.9082 ...
+2025-05-11 02:44:14 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 02:44:14 -   P2 E6 B4000/4500 | L:1987.4135 ...
+2025-05-11 02:44:51 -   P2 E6 B4100/4500 | L:14170.6279 ...
+2025-05-11 02:45:28 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 02:45:28 -   P2 E6 B4200/4500 | L:50734.6016 ...
+2025-05-11 02:46:06 -   P2 E6 B4300/4500 | L:3509.2661 ...
+2025-05-11 02:46:43 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 02:46:43 -   P2 E6 B4400/4500 | L:5618.8105 ...
+2025-05-11 02:47:20 -   P2 E6 B4500/4500 | L:3920.0596 ...
+2025-05-11 02:47:22 - ------------------------------------------------------------
+Epoch 6/1000 Summary (Phase 2 (ResAE on MCN, All Trainable)) | Time: 1722.16s
+2025-05-11 02:47:22 -   Avg Loss: 28270.20053 | MSE_F: 2.825647 | MSE_R: 0.000697
+2025-05-11 02:47:22 -   Avg BPP_M(est): 6.46787 | BPP_R(est): 2.38973
+2025-05-11 02:47:22 - ------------------------------------------------------------
+2025-05-11 02:47:22 - Saved latest checkpoint to 'latest_checkpoint_3phase.pth.tar'.
+2025-05-11 02:47:23 - Generated visualization for Epoch 6.
+2025-05-11 02:47:23 - 
+--- Starting Epoch 7/1000 (Phase 2 (ResAE on MCN, All Trainable)) ---
+2025-05-11 02:47:23 - Phase 2: All relevant parameters trainable (including MCN).
+2025-05-11 02:48:42 -   P2 E7 B100/4500 | L:989.1705 ...
+2025-05-11 02:49:19 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 02:49:19 -   P2 E7 B200/4500 | L:3331.0901 ...
+2025-05-11 02:49:56 -   P2 E7 B300/4500 | L:16171.4756 ...
+2025-05-11 02:50:34 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 02:50:34 -   P2 E7 B400/4500 | L:3358.6541 ...
+2025-05-11 02:51:11 -   P2 E7 B500/4500 | L:4237.7275 ...
+2025-05-11 02:51:49 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 02:51:49 -   P2 E7 B600/4500 | L:1166.7494 ...
+2025-05-11 02:52:27 -   P2 E7 B700/4500 | L:4600.3398 ...
+2025-05-11 02:53:05 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 02:53:05 -   P2 E7 B800/4500 | L:40567.2383 ...
+2025-05-11 02:53:42 -   P2 E7 B900/4500 | L:185001.5469 ...
+2025-05-11 02:54:20 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 02:54:20 -   P2 E7 B1000/4500 | L:13189.7197 ...
+2025-05-11 02:54:58 -   P2 E7 B1100/4500 | L:4983.0410 ...
+2025-05-11 02:55:35 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 02:55:35 -   P2 E7 B1200/4500 | L:13463.2090 ...
+2025-05-11 02:56:12 -   P2 E7 B1300/4500 | L:54084.2031 ...
+2025-05-11 02:56:50 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 02:56:50 -   P2 E7 B1400/4500 | L:29856.8574 ...
+2025-05-11 02:57:27 -   P2 E7 B1500/4500 | L:2523.4817 ...
+2025-05-11 02:58:04 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 02:58:04 -   P2 E7 B1600/4500 | L:22371.6582 ...
+2025-05-11 02:58:41 -   P2 E7 B1700/4500 | L:24941.0977 ...
+2025-05-11 02:59:19 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 02:59:19 -   P2 E7 B1800/4500 | L:1625.7156 ...
+2025-05-11 02:59:56 -   P2 E7 B1900/4500 | L:7470.9995 ...
+2025-05-11 03:00:33 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 03:00:33 -   P2 E7 B2000/4500 | L:8428.9814 ...
+2025-05-11 03:01:10 -   P2 E7 B2100/4500 | L:45911.5156 ...
+2025-05-11 03:01:47 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 03:01:47 -   P2 E7 B2200/4500 | L:79378.2031 ...
+2025-05-11 03:02:24 -   P2 E7 B2300/4500 | L:10543.6816 ...
+2025-05-11 03:03:02 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 03:03:02 -   P2 E7 B2400/4500 | L:2550.6433 ...
+2025-05-11 03:03:39 -   P2 E7 B2500/4500 | L:2222.6328 ...
+2025-05-11 03:04:16 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 03:04:16 -   P2 E7 B2600/4500 | L:7108.7163 ...
+2025-05-11 03:04:53 -   P2 E7 B2700/4500 | L:237042.7656 ...
+2025-05-11 03:05:31 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 03:05:31 -   P2 E7 B2800/4500 | L:4437.0518 ...
+2025-05-11 03:06:08 -   P2 E7 B2900/4500 | L:2865.0840 ...
+2025-05-11 03:06:45 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 03:06:45 -   P2 E7 B3000/4500 | L:112336.3672 ...
+2025-05-11 03:07:22 -   P2 E7 B3100/4500 | L:23976.3516 ...
+2025-05-11 03:08:00 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 03:08:00 -   P2 E7 B3200/4500 | L:33219.3398 ...
+2025-05-11 03:08:37 -   P2 E7 B3300/4500 | L:1729.5654 ...
+2025-05-11 03:09:14 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 03:09:14 -   P2 E7 B3400/4500 | L:65943.2500 ...
+2025-05-11 03:09:51 -   P2 E7 B3500/4500 | L:44037.7070 ...
+2025-05-11 03:10:28 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 03:10:28 -   P2 E7 B3600/4500 | L:1823.2795 ...
+2025-05-11 03:11:06 -   P2 E7 B3700/4500 | L:22130.4336 ...
+2025-05-11 03:11:43 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 03:11:43 -   P2 E7 B3800/4500 | L:2824.9973 ...
+2025-05-11 03:12:20 -   P2 E7 B3900/4500 | L:87013.5078 ...
+2025-05-11 03:12:57 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 03:12:57 -   P2 E7 B4000/4500 | L:19873.7539 ...
+2025-05-11 03:13:34 -   P2 E7 B4100/4500 | L:24039.4219 ...
+2025-05-11 03:14:12 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 03:14:12 -   P2 E7 B4200/4500 | L:31298.9844 ...
+2025-05-11 03:14:49 -   P2 E7 B4300/4500 | L:6331.0293 ...
+2025-05-11 03:15:26 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 03:15:26 -   P2 E7 B4400/4500 | L:3944.8269 ...
+2025-05-11 03:16:03 -   P2 E7 B4500/4500 | L:3326.7861 ...
+2025-05-11 03:16:05 - ------------------------------------------------------------
+Epoch 7/1000 Summary (Phase 2 (ResAE on MCN, All Trainable)) | Time: 1721.58s
+2025-05-11 03:16:05 -   Avg Loss: 26352.64714 | MSE_F: 2.634038 | MSE_R: 0.000522
+2025-05-11 03:16:05 -   Avg BPP_M(est): 6.56646 | BPP_R(est): 2.04898
+2025-05-11 03:16:05 - ------------------------------------------------------------
+2025-05-11 03:16:05 - Saved latest checkpoint to 'latest_checkpoint_3phase.pth.tar'.
+2025-05-11 03:16:06 - Generated visualization for Epoch 7.
+2025-05-11 03:16:06 - 
+--- Starting Epoch 8/1000 (Phase 2 (ResAE on MCN, All Trainable)) ---
+2025-05-11 03:16:06 - Phase 2: All relevant parameters trainable (including MCN).
+2025-05-11 03:17:22 -   P2 E8 B100/4500 | L:2732.2358 ...
+2025-05-11 03:17:59 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 03:17:59 -   P2 E8 B200/4500 | L:6341.6616 ...
+2025-05-11 03:18:36 -   P2 E8 B300/4500 | L:14156.0049 ...
+2025-05-11 03:19:13 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 03:19:13 -   P2 E8 B400/4500 | L:24992.4707 ...
+2025-05-11 03:19:50 -   P2 E8 B500/4500 | L:7614.5015 ...
+2025-05-11 03:20:27 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 03:20:27 -   P2 E8 B600/4500 | L:1533.0588 ...
+2025-05-11 03:21:04 -   P2 E8 B700/4500 | L:21886.3477 ...
+2025-05-11 03:21:42 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 03:21:42 -   P2 E8 B800/4500 | L:20721.2910 ...
+2025-05-11 03:22:19 -   P2 E8 B900/4500 | L:21239.2480 ...
+2025-05-11 03:22:57 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 03:22:57 -   P2 E8 B1000/4500 | L:17089.3984 ...
+2025-05-11 03:23:36 -   P2 E8 B1100/4500 | L:1647.1266 ...
+2025-05-11 03:24:31 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 03:24:31 -   P2 E8 B1200/4500 | L:11986.7021 ...
+2025-05-11 03:25:31 -   P2 E8 B1300/4500 | L:88897.2031 ...
+2025-05-11 03:26:29 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 03:26:29 -   P2 E8 B1400/4500 | L:5642.6157 ...
+2025-05-11 03:27:08 -   P2 E8 B1500/4500 | L:6377.0391 ...
+2025-05-11 03:27:46 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 03:27:46 -   P2 E8 B1600/4500 | L:21357.6465 ...
+2025-05-11 03:28:24 -   P2 E8 B1700/4500 | L:26774.3398 ...
+2025-05-11 03:29:04 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 03:29:04 -   P2 E8 B1800/4500 | L:53079.9258 ...
+2025-05-11 03:29:44 -   P2 E8 B1900/4500 | L:21997.7852 ...
+2025-05-11 03:30:22 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 03:30:22 -   P2 E8 B2000/4500 | L:12952.9990 ...
+2025-05-11 03:31:00 -   P2 E8 B2100/4500 | L:79321.9688 ...
+2025-05-11 03:31:38 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 03:31:38 -   P2 E8 B2200/4500 | L:1366.0458 ...
+2025-05-11 03:32:16 -   P2 E8 B2300/4500 | L:1550.7461 ...
+2025-05-11 03:32:56 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 03:32:56 -   P2 E8 B2400/4500 | L:18860.9258 ...
+2025-05-11 03:33:42 -   P2 E8 B2500/4500 | L:18679.3398 ...
+2025-05-11 03:34:29 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 03:34:29 -   P2 E8 B2600/4500 | L:32696.9648 ...
+2025-05-11 03:35:16 -   P2 E8 B2700/4500 | L:147725.2344 ...
+2025-05-11 03:36:00 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 03:36:00 -   P2 E8 B2800/4500 | L:5723.1426 ...
+2025-05-11 03:36:43 -   P2 E8 B2900/4500 | L:749.3726 ...
+2025-05-11 03:37:28 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 03:37:28 -   P2 E8 B3000/4500 | L:5455.4004 ...
+2025-05-11 03:38:15 -   P2 E8 B3100/4500 | L:1023131.0625 ...
+2025-05-11 03:38:56 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 03:38:56 -   P2 E8 B3200/4500 | L:3240.7693 ...
+2025-05-11 03:39:37 -   P2 E8 B3300/4500 | L:33959.0898 ...
+2025-05-11 03:40:23 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 03:40:23 -   P2 E8 B3400/4500 | L:19402.6426 ...
+2025-05-11 03:41:06 -   P2 E8 B3500/4500 | L:3543.0269 ...
+2025-05-11 03:41:48 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 03:41:48 -   P2 E8 B3600/4500 | L:1075.1846 ...
+2025-05-11 03:42:28 -   P2 E8 B3700/4500 | L:10829.8359 ...
+2025-05-11 03:43:10 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 03:43:10 -   P2 E8 B3800/4500 | L:29516.4219 ...
+2025-05-11 03:43:49 -   P2 E8 B3900/4500 | L:7810.8442 ...
+2025-05-11 03:44:27 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 03:44:27 -   P2 E8 B4000/4500 | L:7020.9980 ...
+2025-05-11 03:45:06 -   P2 E8 B4100/4500 | L:1054.5110 ...
+2025-05-11 03:45:46 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 03:45:46 -   P2 E8 B4200/4500 | L:55798.8633 ...
+2025-05-11 03:46:27 -   P2 E8 B4300/4500 | L:6016.7271 ...
+2025-05-11 03:47:06 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 03:47:06 -   P2 E8 B4400/4500 | L:3266.6382 ...
+2025-05-11 03:47:45 -   P2 E8 B4500/4500 | L:10330.6768 ...
+2025-05-11 03:47:47 - ------------------------------------------------------------
+Epoch 8/1000 Summary (Phase 2 (ResAE on MCN, All Trainable)) | Time: 1900.53s
+2025-05-11 03:47:47 -   Avg Loss: 25983.30172 | MSE_F: 2.597140 | MSE_R: 0.000483
+2025-05-11 03:47:47 -   Avg BPP_M(est): 6.60461 | BPP_R(est): 1.91879
+2025-05-11 03:47:47 - ------------------------------------------------------------
+2025-05-11 03:47:47 - Saved latest checkpoint to 'latest_checkpoint_3phase.pth.tar'.
+2025-05-11 03:47:49 - Generated visualization for Epoch 8.
+2025-05-11 03:47:49 - 
+--- Starting Epoch 9/1000 (Phase 2 (ResAE on MCN, All Trainable)) ---
+2025-05-11 03:47:49 - Phase 2: All relevant parameters trainable (including MCN).
+2025-05-11 03:49:15 -   P2 E9 B100/4500 | L:206973.9219 ...
+2025-05-11 03:49:52 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 03:49:52 -   P2 E9 B200/4500 | L:16196.8760 ...
+2025-05-11 03:50:29 -   P2 E9 B300/4500 | L:49282.9336 ...
+2025-05-11 03:51:07 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 03:51:07 -   P2 E9 B400/4500 | L:378693.5312 ...
+2025-05-11 03:51:45 -   P2 E9 B500/4500 | L:38062.9375 ...
+2025-05-11 03:52:22 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 03:52:22 -   P2 E9 B600/4500 | L:5907.7891 ...
+2025-05-11 03:53:01 -   P2 E9 B700/4500 | L:1848.5956 ...
+2025-05-11 03:53:39 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 03:53:39 -   P2 E9 B800/4500 | L:9661.4111 ...
+2025-05-11 03:54:17 -   P2 E9 B900/4500 | L:24530.5352 ...
+2025-05-11 03:54:56 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 03:54:56 -   P2 E9 B1000/4500 | L:907.1710 ...
+2025-05-11 03:55:33 -   P2 E9 B1100/4500 | L:2762.3528 ...
+2025-05-11 03:56:11 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 03:56:11 -   P2 E9 B1200/4500 | L:6536.3530 ...
+2025-05-11 03:56:49 -   P2 E9 B1300/4500 | L:2482.1074 ...
+2025-05-11 03:57:27 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 03:57:27 -   P2 E9 B1400/4500 | L:248078.2344 ...
+2025-05-11 03:58:05 -   P2 E9 B1500/4500 | L:3778.5022 ...
+2025-05-11 03:58:43 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 03:58:43 -   P2 E9 B1600/4500 | L:1754.7084 ...
+2025-05-11 03:59:20 -   P2 E9 B1700/4500 | L:62342.6641 ...
+2025-05-11 03:59:58 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 03:59:58 -   P2 E9 B1800/4500 | L:23901.3867 ...
+2025-05-11 04:00:36 -   P2 E9 B1900/4500 | L:9636.2861 ...
+2025-05-11 04:01:14 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:01:14 -   P2 E9 B2000/4500 | L:7674.6353 ...
+2025-05-11 04:01:54 -   P2 E9 B2100/4500 | L:8817.0322 ...
+2025-05-11 04:02:33 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:02:33 -   P2 E9 B2200/4500 | L:15408.2578 ...
+2025-05-11 04:03:11 -   P2 E9 B2300/4500 | L:3744.0640 ...
+2025-05-11 04:03:50 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:03:50 -   P2 E9 B2400/4500 | L:5714.8477 ...
+2025-05-11 04:04:30 -   P2 E9 B2500/4500 | L:3359.8694 ...
+2025-05-11 04:05:13 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:05:13 -   P2 E9 B2600/4500 | L:1443.3625 ...
+2025-05-11 04:05:56 -   P2 E9 B2700/4500 | L:6200.6011 ...
+2025-05-11 04:06:39 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:06:39 -   P2 E9 B2800/4500 | L:30661.0840 ...
+2025-05-11 04:07:18 -   P2 E9 B2900/4500 | L:10269.4023 ...
+2025-05-11 04:07:58 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:07:58 -   P2 E9 B3000/4500 | L:1368.6332 ...
+2025-05-11 04:08:38 -   P2 E9 B3100/4500 | L:14822.6328 ...
+2025-05-11 04:09:22 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:09:22 -   P2 E9 B3200/4500 | L:5756.6519 ...
+2025-05-11 04:10:04 -   P2 E9 B3300/4500 | L:1078590.5000 ...
+2025-05-11 04:10:47 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:10:47 -   P2 E9 B3400/4500 | L:1736.6755 ...
+2025-05-11 04:11:27 -   P2 E9 B3500/4500 | L:31390.5898 ...
+2025-05-11 04:12:08 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:12:08 -   P2 E9 B3600/4500 | L:1776.8243 ...
+2025-05-11 04:12:51 -   P2 E9 B3700/4500 | L:6903.2739 ...
+2025-05-11 04:13:33 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:13:33 -   P2 E9 B3800/4500 | L:667.6092 ...
+2025-05-11 04:14:14 -   P2 E9 B3900/4500 | L:9873.2109 ...
+2025-05-11 04:14:56 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:14:56 -   P2 E9 B4000/4500 | L:44223.9375 ...
+2025-05-11 04:15:39 -   P2 E9 B4100/4500 | L:13241.4492 ...
+2025-05-11 04:16:20 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:16:20 -   P2 E9 B4200/4500 | L:12868.8467 ...
+2025-05-11 04:17:03 -   P2 E9 B4300/4500 | L:3139.5271 ...
+2025-05-11 04:17:46 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:17:46 -   P2 E9 B4400/4500 | L:19235.1621 ...
+2025-05-11 04:18:29 -   P2 E9 B4500/4500 | L:30154.8652 ...
+2025-05-11 04:18:30 - ------------------------------------------------------------
+Epoch 9/1000 Summary (Phase 2 (ResAE on MCN, All Trainable)) | Time: 1841.58s
+2025-05-11 04:18:30 -   Avg Loss: 24290.48788 | MSE_F: 2.427883 | MSE_R: 0.000448
+2025-05-11 04:18:30 -   Avg BPP_M(est): 6.70120 | BPP_R(est): 1.82250
+2025-05-11 04:18:30 - ------------------------------------------------------------
+2025-05-11 04:18:31 - Saved latest checkpoint to 'latest_checkpoint_3phase.pth.tar'.
+2025-05-11 04:18:32 - Generated visualization for Epoch 9.
+2025-05-11 04:18:32 - 
+--- Starting Epoch 10/1000 (Phase 2 (ResAE on MCN, All Trainable)) ---
+2025-05-11 04:18:32 - Phase 2: All relevant parameters trainable (including MCN).
+2025-05-11 04:19:56 -   P2 E10 B100/4500 | L:785.5175 ...
+2025-05-11 04:20:33 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:20:33 -   P2 E10 B200/4500 | L:77119.8203 ...
+2025-05-11 04:21:11 -   P2 E10 B300/4500 | L:20697.2168 ...
+2025-05-11 04:21:49 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:21:49 -   P2 E10 B400/4500 | L:62683.5195 ...
+2025-05-11 04:22:31 -   P2 E10 B500/4500 | L:20406.8027 ...
+2025-05-11 04:23:11 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:23:11 -   P2 E10 B600/4500 | L:7212.5483 ...
+2025-05-11 04:23:50 -   P2 E10 B700/4500 | L:4801.9971 ...
+2025-05-11 04:24:47 - ============================================================
+Starting Training Session (3-Phase)
+============================================================
+2025-05-11 04:24:47 - frame_base_dir: ./sequence
+2025-05-11 04:24:47 - flow_base_dir: ./generated_flow
+2025-05-11 04:24:47 - checkpoint_dir: ./codec_checkpoints_2phase_visual
+2025-05-11 04:24:47 - vis_dir: ./codec_visualizations_3phase
+2025-05-11 04:24:47 - log_file: training_log_3phase.txt
+2025-05-11 04:24:47 - latest_checkpoint_file: latest_checkpoint_3phase.pth.tar
+2025-05-11 04:24:47 - motion_latent_channels: 128
+2025-05-11 04:24:47 - residual_latent_channels: 192
+2025-05-11 04:24:47 - mcn_base_channels: 32
+2025-05-11 04:24:47 - encoder_base_channels: 64
+2025-05-11 04:24:47 - encoder_res_blocks: 2
+2025-05-11 04:24:47 - encoder_downsample_layers: 3
+2025-05-11 04:24:47 - decoder_res_blocks: 2
+2025-05-11 04:24:47 - decoder_upsample_layers: 3
+2025-05-11 04:24:47 - epochs: 1000
+2025-05-11 04:24:47 - batch_size: 4
+2025-05-11 04:24:47 - learning_rate: 0.0001
+2025-05-11 04:24:47 - weight_decay: 1e-05
+2025-05-11 04:24:47 - clip_max_norm: 1.0
+2025-05-11 04:24:47 - seed: 42
+2025-05-11 04:24:47 - num_workers: 8
+2025-05-11 04:24:47 - print_freq: 100
+2025-05-11 04:24:47 - use_amp: True
+2025-05-11 04:24:47 - bitstream_calc_freq: 200
+2025-05-11 04:24:47 - phase1_epochs: 5
+2025-05-11 04:24:47 - phase3_start_epoch: 10
+2025-05-11 04:24:47 - lambda_mse_flow: 10000.0
+2025-05-11 04:24:47 - lambda_mse_residual: 7000.0
+2025-05-11 04:24:47 - lambda_bpp_motion: 1.0
+2025-05-11 04:24:47 - lambda_bpp_residual: 1.0
+2025-05-11 04:24:47 - lambda_msssim_phase3: 1.0
+2025-05-11 04:24:47 - learning_rate_phase3: 1e-05
+2025-05-11 04:24:47 - freeze_mcn_phase1: True
+2025-05-11 04:24:47 - device: cuda
+2025-05-11 04:24:47 - Setting up dataset...
+2025-05-11 04:24:59 - Dataset: 18000 pairs. Loader: 4500 batches/epoch.
+2025-05-11 04:24:59 - Initializing Video Codec model...
+2025-05-11 04:24:59 - Model initialized (29,938,216 total trainable parameters initially).
+2025-05-11 04:24:59 - Found latest checkpoint: ./codec_checkpoints_2phase_visual\latest_checkpoint_3phase.pth.tar
+2025-05-11 04:25:00 - Resumed successfully from Epoch 9.
+2025-05-11 04:25:00 - --- Starting Training Loop from Epoch 10 to 1000 ---
+2025-05-11 04:25:00 - 
+--- Starting Epoch 10/1000 (Phase 3 (MCN Fine-tune MS-SSIM)) ---
+2025-05-11 04:25:00 - Configuring optimizer for Phase 3 (MCN only, LR: 1e-05).
+2025-05-11 04:26:44 - ============================================================
+Starting Training Session (3-Phase)
+============================================================
+2025-05-11 04:26:44 - frame_base_dir: ./sequence
+2025-05-11 04:26:44 - flow_base_dir: ./generated_flow
+2025-05-11 04:26:44 - checkpoint_dir: ./codec_checkpoints_2phase_visual
+2025-05-11 04:26:44 - vis_dir: ./codec_visualizations_3phase
+2025-05-11 04:26:44 - log_file: training_log_3phase.txt
+2025-05-11 04:26:44 - latest_checkpoint_file: latest_checkpoint_3phase.pth.tar
+2025-05-11 04:26:44 - motion_latent_channels: 128
+2025-05-11 04:26:44 - residual_latent_channels: 192
+2025-05-11 04:26:44 - mcn_base_channels: 32
+2025-05-11 04:26:44 - encoder_base_channels: 64
+2025-05-11 04:26:44 - encoder_res_blocks: 2
+2025-05-11 04:26:44 - encoder_downsample_layers: 3
+2025-05-11 04:26:44 - decoder_res_blocks: 2
+2025-05-11 04:26:44 - decoder_upsample_layers: 3
+2025-05-11 04:26:44 - epochs: 1000
+2025-05-11 04:26:44 - batch_size: 4
+2025-05-11 04:26:44 - learning_rate: 0.0001
+2025-05-11 04:26:44 - weight_decay: 1e-05
+2025-05-11 04:26:44 - clip_max_norm: 1.0
+2025-05-11 04:26:44 - seed: 42
+2025-05-11 04:26:44 - num_workers: 8
+2025-05-11 04:26:44 - print_freq: 100
+2025-05-11 04:26:44 - use_amp: True
+2025-05-11 04:26:44 - bitstream_calc_freq: 200
+2025-05-11 04:26:44 - phase1_epochs: 5
+2025-05-11 04:26:44 - phase3_start_epoch: 10
+2025-05-11 04:26:44 - lambda_mse_flow: 10000.0
+2025-05-11 04:26:44 - lambda_mse_residual: 7000.0
+2025-05-11 04:26:44 - lambda_bpp_motion: 1.0
+2025-05-11 04:26:44 - lambda_bpp_residual: 1.0
+2025-05-11 04:26:44 - lambda_msssim_phase3: 5.0
+2025-05-11 04:26:44 - learning_rate_phase3: 0.0001
+2025-05-11 04:26:44 - freeze_mcn_phase1: True
+2025-05-11 04:26:44 - device: cuda
+2025-05-11 04:26:44 - Setting up dataset...
+2025-05-11 04:26:55 - Dataset: 18000 pairs. Loader: 4500 batches/epoch.
+2025-05-11 04:26:55 - Initializing Video Codec model...
+2025-05-11 04:26:55 - Model initialized (29,938,216 total trainable parameters initially).
+2025-05-11 04:26:55 - Found latest checkpoint: ./codec_checkpoints_2phase_visual\latest_checkpoint_3phase.pth.tar
+2025-05-11 04:26:56 - Resumed successfully from Epoch 9.
+2025-05-11 04:26:56 - --- Starting Training Loop from Epoch 10 to 1000 ---
+2025-05-11 04:26:56 - 
+--- Starting Epoch 10/1000 (Phase 3 (MCN Fine-tune MS-SSIM)) ---
+2025-05-11 04:26:56 - Configuring optimizer for Phase 3 (MCN only, LR: 0.0001).
+2025-05-11 04:28:23 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:29:09 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:29:57 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:30:45 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:31:31 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:32:22 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:33:08 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:33:57 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:34:44 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:35:28 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:36:13 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:36:58 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:37:42 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:38:26 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:39:11 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:39:56 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:40:40 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:41:24 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:42:08 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:42:52 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:43:36 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:44:20 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:44:44 - ------------------------------------------------------------
+Epoch 10/1000 Summary (Phase 3 (MCN Fine-tune MS-SSIM)) | Time: 1068.06s
+2025-05-11 04:44:44 -   Avg Loss (1-MS-SSIM): 0.18211 | Avg MS-SSIM: 0.96358
+2025-05-11 04:44:44 - ------------------------------------------------------------
+2025-05-11 04:44:44 - Saved latest checkpoint to 'latest_checkpoint_3phase.pth.tar'.
+2025-05-11 04:44:45 - Generated visualization for Epoch 10.
+2025-05-11 04:44:45 - 
+--- Starting Epoch 11/1000 (Phase 3 (MCN Fine-tune MS-SSIM)) ---
+2025-05-11 04:46:09 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:46:53 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:47:37 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:48:21 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:49:06 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:49:50 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:50:34 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:51:18 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:52:03 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:52:47 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:53:31 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:54:15 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:54:59 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:55:44 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:56:28 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:57:12 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:57:56 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:58:41 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 04:59:25 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:00:09 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:00:53 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:01:37 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:02:01 - ------------------------------------------------------------
+Epoch 11/1000 Summary (Phase 3 (MCN Fine-tune MS-SSIM)) | Time: 1035.68s
+2025-05-11 05:02:01 -   Avg Loss (1-MS-SSIM): 0.20014 | Avg MS-SSIM: 0.95997
+2025-05-11 05:02:01 - ------------------------------------------------------------
+2025-05-11 05:02:01 - Saved latest checkpoint to 'latest_checkpoint_3phase.pth.tar'.
+2025-05-11 05:02:02 - Generated visualization for Epoch 11.
+2025-05-11 05:02:02 - 
+--- Starting Epoch 12/1000 (Phase 3 (MCN Fine-tune MS-SSIM)) ---
+2025-05-11 05:03:26 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:04:10 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:04:54 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:05:38 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:06:22 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:07:06 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:07:50 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:08:35 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:09:19 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:10:03 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:10:47 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:11:32 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:12:16 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:13:00 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:13:44 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:14:28 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:15:13 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:15:57 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:16:41 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:17:25 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:18:09 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:18:54 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:19:17 - ------------------------------------------------------------
+Epoch 12/1000 Summary (Phase 3 (MCN Fine-tune MS-SSIM)) | Time: 1035.03s
+2025-05-11 05:19:17 -   Avg Loss (1-MS-SSIM): 0.20520 | Avg MS-SSIM: 0.95896
+2025-05-11 05:19:17 - ------------------------------------------------------------
+2025-05-11 05:19:17 - Saved latest checkpoint to 'latest_checkpoint_3phase.pth.tar'.
+2025-05-11 05:19:18 - Generated visualization for Epoch 12.
+2025-05-11 05:19:18 - 
+--- Starting Epoch 13/1000 (Phase 3 (MCN Fine-tune MS-SSIM)) ---
+2025-05-11 05:20:42 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:21:26 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:22:10 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:22:54 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:23:38 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:24:22 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:25:06 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:25:50 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:26:35 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:27:19 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:28:03 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:28:48 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:29:32 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:30:16 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:31:00 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:31:45 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:32:29 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:33:13 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:33:57 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:34:41 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:35:26 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:36:10 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:36:33 - ------------------------------------------------------------
+Epoch 13/1000 Summary (Phase 3 (MCN Fine-tune MS-SSIM)) | Time: 1035.05s
+2025-05-11 05:36:33 -   Avg Loss (1-MS-SSIM): 0.20322 | Avg MS-SSIM: 0.95936
+2025-05-11 05:36:33 - ------------------------------------------------------------
+2025-05-11 05:36:34 - Saved latest checkpoint to 'latest_checkpoint_3phase.pth.tar'.
+2025-05-11 05:36:35 - Generated visualization for Epoch 13.
+2025-05-11 05:36:35 - 
+--- Starting Epoch 14/1000 (Phase 3 (MCN Fine-tune MS-SSIM)) ---
+2025-05-11 05:37:58 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:38:42 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:39:26 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:40:10 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:40:55 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:41:39 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:42:23 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:43:07 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:43:52 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:44:36 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:45:20 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:46:04 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:46:48 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:47:33 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:48:17 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:49:01 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:49:45 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:50:29 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:51:14 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:51:58 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:52:42 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:53:26 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:53:50 - ------------------------------------------------------------
+Epoch 14/1000 Summary (Phase 3 (MCN Fine-tune MS-SSIM)) | Time: 1035.08s
+2025-05-11 05:53:50 -   Avg Loss (1-MS-SSIM): 0.20427 | Avg MS-SSIM: 0.95915
+2025-05-11 05:53:50 - ------------------------------------------------------------
+2025-05-11 05:53:50 - Saved latest checkpoint to 'latest_checkpoint_3phase.pth.tar'.
+2025-05-11 05:53:51 - Generated visualization for Epoch 14.
+2025-05-11 05:53:51 - 
+--- Starting Epoch 15/1000 (Phase 3 (MCN Fine-tune MS-SSIM)) ---
+2025-05-11 05:55:14 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:55:58 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:56:42 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:57:26 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:58:10 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:58:54 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 05:59:39 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:00:23 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:01:07 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:01:51 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:02:35 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:03:20 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:04:04 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:04:48 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:05:32 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:06:17 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:07:01 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:07:45 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:08:29 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:09:13 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:09:58 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:10:42 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:11:05 - ------------------------------------------------------------
+Epoch 15/1000 Summary (Phase 3 (MCN Fine-tune MS-SSIM)) | Time: 1034.40s
+2025-05-11 06:11:05 -   Avg Loss (1-MS-SSIM): 0.19967 | Avg MS-SSIM: 0.96007
+2025-05-11 06:11:05 - ------------------------------------------------------------
+2025-05-11 06:11:06 - Saved latest checkpoint to 'latest_checkpoint_3phase.pth.tar'.
+2025-05-11 06:11:07 - Generated visualization for Epoch 15.
+2025-05-11 06:11:07 - 
+--- Starting Epoch 16/1000 (Phase 3 (MCN Fine-tune MS-SSIM)) ---
+2025-05-11 06:12:30 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:13:14 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:13:58 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:14:42 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:15:26 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:16:10 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:16:54 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:17:39 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:18:23 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:19:07 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:19:51 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:20:35 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:21:20 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:22:04 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:22:48 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:23:33 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:24:17 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:25:01 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:25:45 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:26:30 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:27:14 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:27:59 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:28:22 - ------------------------------------------------------------
+Epoch 16/1000 Summary (Phase 3 (MCN Fine-tune MS-SSIM)) | Time: 1035.34s
+2025-05-11 06:28:22 -   Avg Loss (1-MS-SSIM): 0.20494 | Avg MS-SSIM: 0.95901
+2025-05-11 06:28:22 - ------------------------------------------------------------
+2025-05-11 06:28:22 - Saved latest checkpoint to 'latest_checkpoint_3phase.pth.tar'.
+2025-05-11 06:28:23 - Generated visualization for Epoch 16.
+2025-05-11 06:28:23 - 
+--- Starting Epoch 17/1000 (Phase 3 (MCN Fine-tune MS-SSIM)) ---
+2025-05-11 06:29:47 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:30:31 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:31:15 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:31:59 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:32:43 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:33:27 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:34:12 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:34:56 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:35:40 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:36:24 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:37:08 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:37:53 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:38:37 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:39:21 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:40:05 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:40:50 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:41:34 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:42:18 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:43:02 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:43:47 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:44:31 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:45:15 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:45:39 - ------------------------------------------------------------
+Epoch 17/1000 Summary (Phase 3 (MCN Fine-tune MS-SSIM)) | Time: 1035.39s
+2025-05-11 06:45:39 -   Avg Loss (1-MS-SSIM): 0.20449 | Avg MS-SSIM: 0.95910
+2025-05-11 06:45:39 - ------------------------------------------------------------
+2025-05-11 06:45:39 - Saved latest checkpoint to 'latest_checkpoint_3phase.pth.tar'.
+2025-05-11 06:45:40 - Generated visualization for Epoch 17.
+2025-05-11 06:45:40 - 
+--- Starting Epoch 18/1000 (Phase 3 (MCN Fine-tune MS-SSIM)) ---
+2025-05-11 06:47:04 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:47:48 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:48:32 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:49:16 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:50:00 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-11 06:50:45 - 
+Warning: Bitstream calc failed: too many values to unpack (expected 2)
+2025-05-13 02:53:04 - ============================================================
+Starting Training Session (3-Phase)
+============================================================
+2025-05-13 02:53:04 - frame_base_dir: ./sequence
+2025-05-13 02:53:04 - flow_base_dir: ./generated_flow
+2025-05-13 02:53:04 - checkpoint_dir: ./codec_checkpoints_2phase_visual
+2025-05-13 02:53:04 - vis_dir: ./codec_visualizations_3phase
+2025-05-13 02:53:04 - log_file: training_log_3phase.txt
+2025-05-13 02:53:04 - latest_checkpoint_file: latest_checkpoint_3phase.pth.tar
+2025-05-13 02:53:04 - motion_latent_channels: 128
+2025-05-13 02:53:04 - residual_latent_channels: 192
+2025-05-13 02:53:04 - mcn_base_channels: 32
+2025-05-13 02:53:04 - encoder_base_channels: 64
+2025-05-13 02:53:04 - encoder_res_blocks: 2
+2025-05-13 02:53:04 - encoder_downsample_layers: 3
+2025-05-13 02:53:04 - decoder_res_blocks: 2
+2025-05-13 02:53:04 - decoder_upsample_layers: 3
+2025-05-13 02:53:04 - epochs: 1000
+2025-05-13 02:53:04 - batch_size: 4
+2025-05-13 02:53:04 - learning_rate: 0.0001
+2025-05-13 02:53:04 - weight_decay: 1e-05
+2025-05-13 02:53:04 - clip_max_norm: 1.0
+2025-05-13 02:53:04 - seed: 42
+2025-05-13 02:53:04 - num_workers: 8
+2025-05-13 02:53:04 - print_freq: 100
+2025-05-13 02:53:04 - use_amp: True
+2025-05-13 02:53:04 - bitstream_calc_freq: 200
+2025-05-13 02:53:04 - phase1_epochs: 5
+2025-05-13 02:53:04 - phase3_start_epoch: 10
+2025-05-13 02:53:04 - lambda_mse_flow: 10000.0
+2025-05-13 02:53:04 - lambda_mse_residual: 7000.0
+2025-05-13 02:53:04 - lambda_bpp_motion: 1.0
+2025-05-13 02:53:04 - lambda_bpp_residual: 1.0
+2025-05-13 02:53:04 - lambda_msssim_phase3: 5.0
+2025-05-13 02:53:04 - learning_rate_phase3: 0.0001
+2025-05-13 02:53:04 - freeze_mcn_phase1: True
+2025-05-13 02:53:04 - device: cuda
+2025-05-13 02:53:04 - Setting up dataset...
+2025-05-13 02:55:38 - Dataset: 18000 pairs. Loader: 4500 batches/epoch.
+2025-05-13 02:55:38 - Initializing Video Codec model...
+2025-05-13 02:55:38 - Model initialized (29,938,216 total trainable parameters initially).
+2025-05-13 02:55:38 - Found latest checkpoint: ./codec_checkpoints_2phase_visual\latest_checkpoint_3phase.pth.tar
+2025-05-13 02:55:39 - Resumed successfully from Epoch 17.
+2025-05-13 02:55:39 - --- Starting Training Loop from Epoch 18 to 1000 ---
+2025-05-13 02:55:39 - 
+--- Starting Epoch 18/1000 (Phase 3 (MCN Fine-tune MS-SSIM)) ---
+2025-05-13 02:55:39 - Configuring optimizer for Phase 3 (MCN only, LR: 0.0001).

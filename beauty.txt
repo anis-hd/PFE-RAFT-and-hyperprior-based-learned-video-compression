@@ -1,0 +1,238 @@
+1080p residual and motion flow resolutions:
+
+Beauty
+
+--- Test Results ---
+Frames tested: 50
+Average PSNR (dB): 30.31
+Average MS-SSIM: 0.8775
+Average BPP (bits per pixel): 0.5151
+Bitrate (kbps): 32043.22
+Total compressed file size (bytes): 6675671
+--- Codec Metrics Test Finished ---
+
+
+ReasySetGo
+
+--- Test Results ---
+Frames tested: 50
+Average PSNR (dB): 27.87
+Average MS-SSIM: 0.9365
+Average BPP (bits per pixel): 0.6180
+Bitrate (kbps): 38442.38
+Total compressed file size (bytes): 8008829
+--- Codec Metrics Test Finished ---
+
+Jockey
+
+
+--- Test Results ---
+Frames tested: 50
+Average PSNR (dB): 29.13
+Average MS-SSIM: 0.9046
+Average BPP (bits per pixel): 1.0363
+Bitrate (kbps): 64464.15
+Total compressed file size (bytes): 13430032
+--- Codec Metrics Test Finished ---
+
+
+
+720p reidual and motion flow resolutions:
+
+
+Beauty
+
+--- Test Results ---
+Frames tested: 50
+Average PSNR (dB): 29.65
+Average MS-SSIM: 0.8655
+Average BPP (bits per pixel): 0.2809
+Bitrate (kbps): 17476.97
+Total compressed file size (bytes): 3641035
+--- Codec Metrics Test Finished ---
+
+ReasySetGo
+
+
+--- Test Results ---
+Frames tested: 50
+Average PSNR (dB): 27.09
+Average MS-SSIM: 0.9219
+Average BPP (bits per pixel): 0.3855
+Bitrate (kbps): 23983.44
+Total compressed file size (bytes): 4996549
+--- Codec Metrics Test Finished ---
+
+
+
+Jockey
+
+
+--- Test Results ---
+Frames tested: 50
+Average PSNR (dB): 28.61
+Average MS-SSIM: 0.8847
+Average BPP (bits per pixel): 0.4180
+Bitrate (kbps): 26002.48
+Total compressed file size (bytes): 5417183
+--- Codec Metrics Test Finished ---
+
+480p residual and motion flow resolutions:
+
+
+Beauty
+
+
+--- Test Results ---
+Frames tested: 50
+Average PSNR (dB): 28.80
+Average MS-SSIM: 0.8464
+Average BPP (bits per pixel): 0.1959
+Bitrate (kbps): 12186.59
+Total compressed file size (bytes): 2538872
+--- Codec Metrics Test Finished ---
+
+
+ReasySetGo
+
+--- Test Results ---
+Frames tested: 50
+Average PSNR (dB): 24.36
+Average MS-SSIM: 0.8541
+Average BPP (bits per pixel): 0.2862
+Bitrate (kbps): 17801.85
+Total compressed file size (bytes): 3708719
+--- Codec Metrics Test Finished ---
+
+
+Jockey
+
+--- Test Results ---
+Frames tested: 50
+Average PSNR (dB): 26.82
+Average MS-SSIM: 0.8388
+Average BPP (bits per pixel): 0.2497
+Bitrate (kbps): 15533.90
+Total compressed file size (bytes): 3236229
+--- Codec Metrics Test Finished ---
+
+360p residual and motion flow resolutions:
+
+
+Beauty
+
+--- Test Results ---
+Frames tested: 50
+Average PSNR (dB): 28.79
+Average MS-SSIM: 0.8459
+Average BPP (bits per pixel): 0.1678
+Bitrate (kbps): 10436.54
+Total compressed file size (bytes): 2174280
+--- Codec Metrics Test Finished ---
+
+
+ReasySetGo
+
+--- Test Results ---
+Frames tested: 50
+Average PSNR (dB): 25.10
+Average MS-SSIM: 0.8721
+Average BPP (bits per pixel): 0.2487
+Bitrate (kbps): 15470.81
+Total compressed file size (bytes): 3223086
+--- Codec Metrics Test Finished ---
+
+
+Jockey
+
+
+--- Test Results ---
+Frames tested: 50
+Average PSNR (dB): 27.42
+Average MS-SSIM: 0.8423
+Average BPP (bits per pixel): 0.1977
+Bitrate (kbps): 12298.39
+Total compressed file size (bytes): 2562164
+--- Codec Metrics Test Finished ---
+
+
+240p residual and motion flow resolutions:
+
+
+Beauty
+
+--- Test Results ---
+Frames tested: 50
+Average PSNR (dB): 27.57
+Average MS-SSIM: 0.8182
+Average BPP (bits per pixel): 0.1485
+Bitrate (kbps): 9238.79
+Total compressed file size (bytes): 1924748
+--- Codec Metrics Test Finished ---
+
+
+
+ReasySetGo
+
+
+--- Test Results ---
+Frames tested: 50
+Average PSNR (dB): 22.10
+Average MS-SSIM: 0.7458
+Average BPP (bits per pixel): 0.2191
+Bitrate (kbps): 13626.86
+Total compressed file size (bytes): 2838930
+--- Codec Metrics Test Finished ---
+
+
+
+Jockey
+
+--- Test Results ---
+Frames tested: 50
+Average PSNR (dB): 23.70
+Average MS-SSIM: 0.7357
+Average BPP (bits per pixel): 0.1603
+Bitrate (kbps): 9972.06
+Total compressed file size (bytes): 2077512
+--- Codec Metrics Test Finished ---
+
+
+
+140p residual and motion flow resolutions: 
+
+Beauty
+
+
+--- Test Results ---
+Frames tested: 50
+Average PSNR (dB): 26.60
+Average MS-SSIM: 0.8075
+Average BPP (bits per pixel): 0.1386
+Bitrate (kbps): 8618.99
+Total compressed file size (bytes): 1795623
+--- Codec Metrics Test Finished ---
+
+ReasySetGo
+
+--- Test Results ---
+Frames tested: 50
+Average PSNR (dB): 20.98
+Average MS-SSIM: 0.6720
+Average BPP (bits per pixel): 0.2014
+Bitrate (kbps): 12531.56
+Total compressed file size (bytes): 2610742
+--- Codec Metrics Test Finished ---
+
+
+Jockey
+
+
+--- Test Results ---
+Frames tested: 50
+Average PSNR (dB): 21.97
+Average MS-SSIM: 0.6673
+Average BPP (bits per pixel): 0.1394
+Bitrate (kbps): 8669.84
+Total compressed file size (bytes): 1806216
+--- Codec Metrics Test Finished ---
