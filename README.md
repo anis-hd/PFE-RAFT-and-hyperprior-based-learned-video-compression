@@ -1,6 +1,6 @@
 # RDVC: Raft Deep Video Compression
 
-**A Hybrid Video Compression Framework combining RAFT Optical Flow, Hyperprior Entropy Coding, and Quantum-Inspired I-Frame Encoding.**
+**A Hybrid Video Compression Framework combining RAFT Optical Flow, Hyperprior Entropy Coding, and Quantum-Inspired I-Frame Encoding (Not included in this repo).**
 
 
 ## Context
