@@ -132,4 +132,18 @@ Final reconstruction is obtained by adding the decoded residual to the motion-co
 **Hyperprior Entropy Model:**
 ![Hyperprior Graph](benchmark/hyperpriorcomponent%20graph.png)
 
+### Training & Filtering
+**RAFT Training Dynamics:**
+![RAFT Training](benchmark/rafttraining.png)
+
+**Temporal Filtering:**
+![First Order IIR Filtering](benchmark/first%20order%20IIR%20temporal%20filtering.png)
+
+### Detailed System Diagrams
+**Detailed Encoding Block Diagram:**
+![RDVC Encoding](benchmark/RDVCencoding.png)
+
+**Detailed Decoding Block Diagram:**
+![RDVC Decoding](benchmark/rdvcdecoding.png)
+
 ---
