@@ -23,6 +23,7 @@ This repository implements a learned video compression framework leveraging **RA
 - `codec_checkpoints_*`: Directories storing model checkpoints.
 - `training_plots/`: Stores metric plots generated during training.
 - `visualization_*/`: Stores qualitative results (reconstructed frames, flow maps, residuals).
+- `benchmark/`: Contains performance graphs, RD curves, and architecture diagrams.
 
 ##  Results & Visualizations
 
@@ -33,12 +34,31 @@ Comparison between the original frame and the reconstructed frame after compress
 |:---:|:---:|
 | ![Original](two_frame_output_histmatch/im2_original_for_comparison.png) | ![Reconstructed](two_frame_output_histmatch/im2_reconstructed_hist_matched.png) |
 
+**Detailed Reconstruction View:**
+![Real vs Reconstructed](benchmark/realvsreconstructed.png)
+
 ### Internal Representations
 The model explicitly handles motion and residuals. Below are the reconstructed optical flow and residual maps.
 
 | Reconstructed Optical Flow | Reconstructed Residual |
 |:---:|:---:|
 | ![Flow](two_frame_output_histmatch/flow_reconstructed_final.png) | ![Residual](two_frame_output_histmatch/residual_reconstructed_final.png) |
+
+**RAFT Flow Prediction Sample:**
+![RAFT Prediction](benchmark/raftprediction.png)
+
+### Benchmarks & Performance
+We evaluate the codec's performance using Rate-Distortion (RD) curves and resolution-specific metrics.
+
+**Rate-Distortion Curves:**
+| PSNR vs Bitrate | MS-SSIM vs Bitrate |
+|:---:|:---:|
+| ![RD Curve PSNR](benchmark/rd_curve_psnr.png) | ![RD Curve MS-SSIM](benchmark/rd_curve_msssim.png) |
+
+**Resolution Analysis:**
+| PSNR by Resolution | MS-SSIM by Resolution |
+|:---:|:---:|
+| ![PSNR Resolution](benchmark/psnr_by_resolution.png) | ![MS-SSIM Resolution](benchmark/msssim_by_resolution.png) |
 
 ### Training Progression
 Visualizing the model's output at the latest training epoch (Phase 3). This includes the motion compensation output and final reconstruction.
@@ -85,7 +105,7 @@ python newcodec.py --encode --input_file input.mp4 --output_file compressed.rdvc
 python newcodec.py --decode --input_file compressed.rdvc --output_file output.mp4
 ```
 
-##  Model Architecture
+##  Model Architecture & Workflows
 
 The `VideoCodec` consists of two main branches:
 1. **Motion Branch**:
@@ -98,3 +118,18 @@ The `VideoCodec` consists of two main branches:
 
 Final reconstruction is obtained by adding the decoded residual to the motion-compensated frame.
 
+### System Diagrams
+**Video Encoding Workflow:**
+![Encoding Process](benchmark/sequenceuml%20encoding%20process.png)
+
+**Video Decoding Workflow:**
+![Decoding Process](benchmark/sequenceuml%20decoding%20process.png)
+
+### Core Components
+**RAFT Optical Flow Architecture:**
+![RAFT Architecture](benchmark/raftarchitecture.png)
+
+**Hyperprior Entropy Model:**
+![Hyperprior Graph](benchmark/hyperpriorcomponent%20graph.png)
+
+---
