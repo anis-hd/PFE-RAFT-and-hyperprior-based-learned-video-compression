@@ -133,7 +133,7 @@ python codec_processing.py --encode --input_file input.yuv --output_file compres
 
 **Decode a video:**
 ```bash
-python newcodec.py --decode --input_file compressed.rdvc --output_file output.mp4
+python codec_processing.py --decode --input_file compressed.rdvc --output_file output.mp4
 ```
 
 ## Project Structure
