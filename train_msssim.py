@@ -1,18 +1,3 @@
-# Single file combining all modules for video codec training using CompressAI - THREE PHASE TRAINING IMPLEMENTATION
-# MODIFIED: Phase 1 Residual AE uses only WARPED frame (no MCN).
-# MODIFIED: Phase 2 Residual AE uses reconstructed flow + MCN.
-# MODIFIED: Phase 3 Full model fine-tuning for MS-SSIM, MSE_flow, MSE_residual, and BPP maintenance.
-# MODIFIED: AEs trained for reconstruction, Entropy models trained for BPP minimization IN PHASES 1 & 2.
-# MODIFIED: Periodic Bitstream Calculation for monitoring.
-# MODIFIED: REMOVED final frame reconstruction and PSNR/MS-SSIM calculation FROM MAIN TRAINING METRICS (P1/P2).
-# MODIFIED: Saves only the latest checkpoint.
-# FIXED: Checkpoint loading for EntropyBottleneck state.
-# ADDED: Visualization of final reconstructed image, motion compensation, flow, and residuals.
-# FIXED: BPP calculation with nn.DataParallel (attempt 1).
-# REMOVED: Debug print statements.
-# REMOVED: Per-batch print logging (keeping tqdm postfix).
-# MODIFIED: Simplified checkpoint saving and added explicit logging for saving/loading paths.
-# USER REQUEST: Phase 3: Freeze everything and train only the Residual Autoencoder for low BPP_residual, low MSE_residual, and optimized MS-SSIM (reconstructed vs real frame).
 
 import torch
 import torch.nn as nn
