@@ -5,7 +5,7 @@
 
 ## Context
 
-This repo implements **RDVC (Raft Deep Video Compression)**, a Final Year Project developed at the **National School of Computer Science (ENSI)** in collaboration with **Talan Tunisie**.
+This repo implements **RDVC (Raft Deep Video Compression)**, a Final Year Project developed at **Talan Tunisie**  in collaboration with the **National School of Computer Science (ENSI)** .
 
 The system addresses the limitations of traditional codecs by proposing a deep learning-based inter-frame compression pipeline. It integrates **RAFT** (Recurrent All-Pairs Field Transforms) for optical flow estimation and **Hyperprior Autoencoders** for entropy coding. Additionally, the project explores **Quantum Computing** simulations for I-frame compression. (NOT INCLUDED IN THIS REPOSITORY)
 
@@ -83,8 +83,6 @@ Comparison between the original frame and the reconstructed frame after compress
 |:---:|:---:|
 | ![Original](two_frame_output_histmatch/im2_original_for_comparison.png) | ![Reconstructed](two_frame_output_histmatch/im2_reconstructed_hist_matched.png) |
 
-**Detailed Reconstruction View:**
-![Real vs Reconstructed](benchmark/realvsreconstructed.png)
 
 ### Internal Representations
 The model explicitly handles motion and residuals. Below are the reconstructed optical flow and residual maps.
@@ -126,11 +124,11 @@ python new_train.py
 ```
 
 ### Encoding & Decoding
-The `newcodec.py` script provides a command-line interface for encoding and decoding videos.
+The `codec_processing.py` script provides a command-line interface for encoding and decoding videos.
 
 **Encode a video:**
 ```bash
-python newcodec.py --encode --input_file input.mp4 --output_file compressed.rdvc
+python codec_processing.py --encode --input_file input.yuv --output_file compressed.rdvc
 ```
 
 **Decode a video:**
@@ -140,14 +138,13 @@ python newcodec.py --decode --input_file compressed.rdvc --output_file output.mp
 
 ## Project Structure
 
-- `newcodec.py`: Core implementation of the `VideoCodec` class, including Encoders, Decoders, Warping layers, and Entropy Bottlenecks.
+- `codec_processing.py`: Core implementation of the `VideoCodec` class, including Encoders, Decoders, Warping layers, and Entropy Bottlenecks.
 - `new_train.py`: The main training script implementing the 3-phase training loop utilizing `CompressAI`.
-- `app.py`: Application entry point (inference/demo).
 - `codec_checkpoints_*`: Directories storing model checkpoints.
 - `training_plots/`: Stores metric plots generated during training.
 - `visualization_*/`: Stores qualitative results (reconstructed frames, flow maps, residuals).
 - `benchmark/`: Contains performance graphs, RD curves, and architecture diagrams.
 
-If you want to train the models from scratch, you can use a pretrained RAFT model provided by the TorchVision library.
+If you want to train the models from scratch, you can use a pretrained RAFT model provided by the TorchVision library or refer to my older repository [RAFT](https://github.com/anis-hd/RAFT_motion_estimation) to train a RAFT model from scratch on the MPI Sintel dataset.
 
 Always happy to collaborate.
