@@ -1,17 +1,4 @@
-# codec.py
-# -*- coding: utf-8 -*-
-"""
-Unified script for video encoding and decoding using RAFT optical flow
-and a learned video codec.
 
-Supports two modes via command-line arguments:
-  --encode: Encodes an input video (MP4 or YUV) into a .rdvc file.
-  --decode: Decodes a previously compressed .rdvc video file.
-"""
-
-# ==============================================================================
-# Imports
-# ==============================================================================
 import argparse
 import io
 import json
@@ -24,7 +11,6 @@ import traceback
 from pathlib import Path
 import struct # Added for RDVC file format
 from skimage.exposure import match_histograms as skimage_match_histograms
-# Third-party Libraries
 import cv2
 import numpy as np
 import torch
@@ -2039,7 +2025,6 @@ if __name__ == "__main__":
 
     elif args.mode == 'decode':
         print("Mode: DECODE (.rdvc file --> Output Video)")
-        # ... (decode validations as before) ...
         input_rdvc_file_for_check = Path(config.input_rdvc_file)
         if not input_rdvc_file_for_check.is_file():
             print(f"FATAL: Input RDVC file '{input_rdvc_file_for_check.resolve()}' (from CodecConfig) not found.")
