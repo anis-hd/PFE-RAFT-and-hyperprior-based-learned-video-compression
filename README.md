@@ -118,10 +118,19 @@ The model explicitly handles motion and residuals. Below are the reconstructed o
 - `torchvision`, `numpy`, `opencv-python`, `pillow`, `tqdm`
 
 
+The main entry point is **`codec_processing.py`** and supports two
+modes: - `encode`: Input video → `.rdvc` bitstream - `decode`: `.rdvc`
+bitstream → output video
+
+All paths and most parameters are defined in `CodecConfig`. Selected
+options can be overridden via CLI arguments.
+
+------------------------------------------------------------------------
+
 ## General Syntax
 
 ``` bash
-python main.py --mode {encode|decode} [OPTIONS]
+python codec_processing.py --mode {encode|decode} [OPTIONS]
 ```
 
 ------------------------------------------------------------------------
@@ -135,7 +144,7 @@ Encodes an input video into an `.rdvc` file.
 Uses all defaults defined in `CodecConfig`:
 
 ``` bash
-python main.py --mode encode
+python codec_processing.py --mode encode
 ```
 
 ------------------------------------------------------------------------
@@ -145,13 +154,13 @@ python main.py --mode encode
 Use a specific GPU:
 
 ``` bash
-python main.py --mode encode --gpu 0
+python codec_processing.py --mode encode --gpu 0
 ```
 
 Force CPU execution:
 
 ``` bash
-python main.py --mode encode --gpu -1
+python codec_processing.py --mode encode --gpu -1
 ```
 
 ------------------------------------------------------------------------
@@ -161,15 +170,15 @@ python main.py --mode encode --gpu -1
 Choose which RAFT implementation to use for motion estimation:
 
 ``` bash
-python main.py --mode encode --raft_backend auto
+python codec_processing.py --mode encode --raft_backend auto
 ```
 
 ``` bash
-python main.py --mode encode --raft_backend torchvision
+python codec_processing.py --mode encode --raft_backend torchvision
 ```
 
 ``` bash
-python main.py --mode encode --raft_backend local
+python codec_processing.py --mode encode --raft_backend local
 ```
 
 ------------------------------------------------------------------------
@@ -177,7 +186,7 @@ python main.py --mode encode --raft_backend local
 ### Full Encoding Example
 
 ``` bash
-python main.py \
+python codec_processing.py \
     --mode encode \
     --gpu 0 \
     --raft_backend auto
@@ -207,7 +216,7 @@ Decodes an `.rdvc` file into a reconstructed video.
 ### Minimal Command
 
 ``` bash
-python main.py --mode decode
+python codec_processing.py --mode decode
 ```
 
 ------------------------------------------------------------------------
@@ -215,13 +224,13 @@ python main.py --mode decode
 ### Specify GPU
 
 ``` bash
-python main.py --mode decode --gpu 0
+python codec_processing.py --mode decode --gpu 0
 ```
 
 Force CPU execution:
 
 ``` bash
-python main.py --mode decode --gpu -1
+python codec_processing.py --mode decode --gpu -1
 ```
 
 ------------------------------------------------------------------------
@@ -231,7 +240,7 @@ python main.py --mode decode --gpu -1
 Adjust the temporal low-pass filter strength:
 
 ``` bash
-python main.py --mode decode --temporal_filter_alpha 0.5
+python codec_processing.py --mode decode --temporal_filter_alpha 0.5
 ```
 
 Valid range: `0.0` (no filtering) to `1.0` (maximum smoothing).
@@ -241,7 +250,7 @@ Valid range: `0.0` (no filtering) to `1.0` (maximum smoothing).
 ### Full Decoding Example
 
 ``` bash
-python main.py \
+python codec_processing.py \
     --mode decode \
     --gpu 0 \
     --temporal_filter_alpha 0.7
@@ -272,7 +281,21 @@ python main.py \
                               `local`)
 
   `--temporal_filter_alpha`   Temporal smoothing factor for decoder
-  -----------------------------------------------------------------------
+
+
+
+  ## Model Training (`new_train.py`)
+
+The script `new_train.py` is responsible for training the RDVC neural video codec using a **3-phase training strategy**.  
+All hyperparameters, paths, and training options are defined in the `TrainConfig` class.
+
+There are **no mandatory command-line arguments**; training is started by executing the script directly.
+
+---
+
+### Training Command
+
+`python new_train.py`
 
 ## Project Structure
 
