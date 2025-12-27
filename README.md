@@ -117,24 +117,162 @@ The model explicitly handles motion and residuals. Below are the reconstructed o
 - `compressai`
 - `torchvision`, `numpy`, `opencv-python`, `pillow`, `tqdm`
 
-### Training
-To start the training process (ensure data paths are configured in `config`):
-```bash
-python new_train.py
+
+## General Syntax
+
+``` bash
+python main.py --mode {encode|decode} [OPTIONS]
 ```
 
-### Encoding & Decoding
-The `codec_processing.py` script provides a command-line interface for encoding and decoding videos.
+------------------------------------------------------------------------
 
-**Encode a video:**
-```bash
-python codec_processing.py --encode --input_file input.yuv --output_file compressed.rdvc
+## Encoding (Video → `.rdvc`)
+
+Encodes an input video into an `.rdvc` file.
+
+### Minimal Command
+
+Uses all defaults defined in `CodecConfig`:
+
+``` bash
+python main.py --mode encode
 ```
 
-**Decode a video:**
-```bash
-python codec_processing.py --decode --input_file compressed.rdvc --output_file output.mp4
+------------------------------------------------------------------------
+
+### Specify GPU
+
+Use a specific GPU:
+
+``` bash
+python main.py --mode encode --gpu 0
 ```
+
+Force CPU execution:
+
+``` bash
+python main.py --mode encode --gpu -1
+```
+
+------------------------------------------------------------------------
+
+### Select RAFT Backend
+
+Choose which RAFT implementation to use for motion estimation:
+
+``` bash
+python main.py --mode encode --raft_backend auto
+```
+
+``` bash
+python main.py --mode encode --raft_backend torchvision
+```
+
+``` bash
+python main.py --mode encode --raft_backend local
+```
+
+------------------------------------------------------------------------
+
+### Full Encoding Example
+
+``` bash
+python main.py \
+    --mode encode \
+    --gpu 0 \
+    --raft_backend auto
+```
+
+------------------------------------------------------------------------
+
+### Notes for Encoding
+
+-   `config.input_file_path` must point to a valid input video.
+-   Supported inputs include standard video formats (e.g. `.mp4`) and
+    raw `.yuv`.
+-   For `.yuv` input, the following **must be set in `CodecConfig`**:
+    -   `input_yuv_width`
+    -   `input_yuv_height`
+    -   `input_yuv_fps`
+    -   `input_yuv_pixel_format` (only `yuv420p` is supported)
+-   The output bitstream location is defined by
+    `config.output_rdvc_file`.
+
+------------------------------------------------------------------------
+
+## Decoding (`.rdvc` → Video)
+
+Decodes an `.rdvc` file into a reconstructed video.
+
+### Minimal Command
+
+``` bash
+python main.py --mode decode
+```
+
+------------------------------------------------------------------------
+
+### Specify GPU
+
+``` bash
+python main.py --mode decode --gpu 0
+```
+
+Force CPU execution:
+
+``` bash
+python main.py --mode decode --gpu -1
+```
+
+------------------------------------------------------------------------
+
+### Override Temporal Filtering (Decoder)
+
+Adjust the temporal low-pass filter strength:
+
+``` bash
+python main.py --mode decode --temporal_filter_alpha 0.5
+```
+
+Valid range: `0.0` (no filtering) to `1.0` (maximum smoothing).
+
+------------------------------------------------------------------------
+
+### Full Decoding Example
+
+``` bash
+python main.py \
+    --mode decode \
+    --gpu 0 \
+    --temporal_filter_alpha 0.7
+```
+
+------------------------------------------------------------------------
+
+### Notes for Decoding
+
+-   `config.input_rdvc_file` must point to an existing `.rdvc` file.
+-   Output video path is defined by `config.output_video_path_decode`.
+-   If `config.debug_frames_dir_decode` is set, decoded frames will be
+    dumped to that directory.
+
+------------------------------------------------------------------------
+
+## CLI Arguments Summary
+
+  -----------------------------------------------------------------------
+  Argument                    Description
+  --------------------------- -------------------------------------------
+  `--mode`                    Operation mode: `encode` or `decode`
+                              (required)
+
+  `--gpu`                     GPU ID (`0`, `1`, ...) or `-1` for CPU
+
+  `--raft_backend`            RAFT implementation (`auto`, `torchvision`,
+                              `local`)
+
+  `--temporal_filter_alpha`   Temporal smoothing factor for decoder
+  -----------------------------------------------------------------------
 
 ## Project Structure
 
