@@ -3,7 +3,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 from torch.utils.data import Dataset, DataLoader
-from torchvision import transforms # Keep for functional resize and dataset transforms
+from torchvision import transforms 
 from PIL import Image
 import os
 import sys
