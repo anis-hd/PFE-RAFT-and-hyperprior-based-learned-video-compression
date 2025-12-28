@@ -306,6 +306,6 @@ There are **no mandatory command-line arguments**; training is started by execut
 - `visualization_*/`: Stores qualitative results (reconstructed frames, flow maps, residuals).
 - `benchmark/`: Contains performance graphs, RD curves, and architecture diagrams.
 
-If you want to train the models from scratch, you can use a pretrained RAFT model provided by the TorchVision library or refer to my older repository [RAFT](https://github.com/anis-hd/RAFT_motion_estimation) to train a RAFT model from scratch on the MPI Sintel dataset.
+If you want to train the models from scratch, you can use a pretrained RAFT model provided by the TorchVision library or refer to my older repository [RAFT](https://github.com/anis-hd/end2end.git) to train a RAFT model from scratch on the MPI Sintel dataset.
 
 Always happy to collaborate.
